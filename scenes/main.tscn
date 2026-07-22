@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://wryv2cnqwxbb"]
+[gd_scene load_steps=3 format=3 uid="uid://wryv2cnqwxbb"]
 
 [ext_resource type="Script" uid="uid://dq7hkeo5hb3qf" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://ddddxr1bbmpmk" path="res://scenes/character.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o5qli")
@@ -15,3 +16,6 @@ text = "THIS IS THE MAIN SCENE"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 120.0
 autostart = true
+
+[node name="character" parent="." instance=ExtResource("2_0wfyh")]
+position = Vector2(354, 418)
