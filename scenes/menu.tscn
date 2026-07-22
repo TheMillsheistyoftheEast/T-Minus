@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://c8hfjovk3jjmd"]
+[gd_scene load_steps=2 format=3 uid="uid://c8hfjovk3jjmd"]
+
+[ext_resource type="Script" uid="uid://bp312s0lm5gjr" path="res://scripts/menu.gd" id="1_yqeox"]
 
 [node name="menu" type="Node2D"]
+script = ExtResource("1_yqeox")
 
 [node name="button manager" type="Control" parent="."]
 layout_mode = 3
@@ -39,3 +42,5 @@ offset_top = 23.0
 offset_right = 124.0
 offset_bottom = 46.0
 text = "T-Minus"
+
+[connection signal="pressed" from="button manager/start" to="." method="_on_start_pressed"]
