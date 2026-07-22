@@ -10,15 +10,32 @@ offset_bottom = 40.0
 
 [node name="start" type="Button" parent="button manager"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 75.0
+offset_top = 61.0
+offset_right = 120.0
+offset_bottom = 92.0
+text = "start"
 
 [node name="settings" type="Button" parent="button manager"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 68.0
+offset_top = 109.0
+offset_right = 137.0
+offset_bottom = 140.0
+text = "settings"
 
 [node name="quit" type="Button" parent="button manager"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 81.0
+offset_top = 161.0
+offset_right = 120.0
+offset_bottom = 192.0
+text = "quit
+"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 62.0
+offset_top = 23.0
+offset_right = 124.0
+offset_bottom = 46.0
+text = "T-Minus"
