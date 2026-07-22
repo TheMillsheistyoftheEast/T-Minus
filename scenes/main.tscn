@@ -13,3 +13,5 @@ offset_bottom = 172.0
 text = "THIS IS THE MAIN SCENE"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 120.0
+autostart = true
