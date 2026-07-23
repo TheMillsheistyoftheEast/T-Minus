@@ -1,16 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgewkfpth40a2"]
+[gd_scene load_steps=6 format=3 uid="uid://bgewkfpth40a2"]
 
 [ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="1_o2pmc"]
 [ext_resource type="Script" uid="uid://c80362ur0o5rf" path="res://scripts/keypad.gd" id="1_vxa2g"]
+[ext_resource type="AudioStream" uid="uid://up03b7snk57t" path="res://Assets/Sounds/10_ui_sfx_free_samples/013_Confirm_03.wav" id="2_y3le2"]
+[ext_resource type="AudioStream" uid="uid://j7mc5howqnu3" path="res://Assets/Sounds/10_ui_sfx_free_samples/033_Denied_03.wav" id="3_08hpx"]
+[ext_resource type="AudioStream" uid="uid://fpltdh74tdn6" path="res://Assets/Sounds/10_ui_sfx_free_samples/001_Hover_01.wav" id="4_2dn7d"]
 
 [node name="keypad" type="Node2D"]
 script = ExtResource("1_vxa2g")
 
 [node name="correct sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_y3le2")
 
 [node name="wrong sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_08hpx")
 
 [node name="key pressed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_2dn7d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(179, 159)
