@@ -7,39 +7,43 @@
 [ext_resource type="Texture2D" uid="uid://cli31mbljst86" path="res://Assets/Yellow wire.png" id="4_7waly"]
 
 [node name="CutTheWiresGame" type="Node2D"]
+scale = Vector2(-0.00629127, 0.00725544)
 script = ExtResource("1_7eq61")
 
 [node name="Bomb Insides" type="Sprite2D" parent="."]
+position = Vector2(-45585.6, 35363.5)
 scale = Vector2(65.5048, 75.6609)
 texture = ExtResource("1_o3dvm")
-metadata/_edit_lock_ = true
 
 [node name="BlueTextureButton" type="TextureButton" parent="."]
 visibility_layer = 4
-offset_left = -7064.0
-offset_top = -3443.0
-offset_right = 14080.0
-offset_bottom = 1775.0
+offset_left = -52649.6
+offset_top = 31920.5
+offset_right = -31505.6
+offset_bottom = 37138.5
 texture_normal = ExtResource("2_7eq61")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="RedTextureButton" type="TextureButton" parent="."]
 visibility_layer = 4
-offset_left = -7075.0
-offset_top = 1885.0
-offset_right = 13882.0
-offset_bottom = 7077.0
+offset_left = -52660.6
+offset_top = 37248.5
+offset_right = -31703.6
+offset_bottom = 42440.5
 texture_normal = ExtResource("3_6wms8")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="YellowTextureButton" type="TextureButton" parent="."]
 light_mask = 4
-offset_left = -7119.0
-offset_top = 7063.0
-offset_right = 13340.0
-offset_bottom = 15410.0
+offset_left = -52704.6
+offset_top = 42426.5
+offset_right = -32245.6
+offset_bottom = 50773.5
 texture_normal = ExtResource("4_7waly")
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="BlueTextureButton" to="." method="_on_blue_texture_button_pressed"]
 [connection signal="pressed" from="RedTextureButton" to="." method="_on_red_texture_button_pressed"]
