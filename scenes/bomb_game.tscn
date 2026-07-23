@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djine4iupcy46"]
+[gd_scene load_steps=6 format=3 uid="uid://djine4iupcy46"]
 
 [ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="1_mfomk"]
 [ext_resource type="Script" uid="uid://6d5majy8hicm" path="res://scripts/bombDone.gd" id="1_wbx4c"]
+[ext_resource type="PackedScene" uid="uid://bgewkfpth40a2" path="res://scenes/keypad.tscn" id="3_huhyi"]
 
 [sub_resource type="GDScript" id="GDScript_huhyi"]
 script/source = "extends Node2D
@@ -23,7 +24,7 @@ func _process(delta: float) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbx4c"]
-size = Vector2(130, 127)
+size = Vector2(233, 233.5)
 
 [node name="BombGame" type="Node2D"]
 script = SubResource("GDScript_huhyi")
@@ -32,8 +33,13 @@ script = SubResource("GDScript_huhyi")
 script = ExtResource("1_wbx4c")
 
 [node name="Sprite2D" type="Sprite2D" parent="bomb"]
+position = Vector2(197, 145)
+scale = Vector2(1.82031, 1.82031)
 texture = ExtResource("1_mfomk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bomb"]
-position = Vector2(-1, 0.5)
+position = Vector2(197.5, 145.25)
 shape = SubResource("RectangleShape2D_wbx4c")
+
+[node name="keypad" parent="." instance=ExtResource("3_huhyi")]
+position = Vector2(19, -14)

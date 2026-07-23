@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://wryv2cnqwxbb"]
+[gd_scene load_steps=2 format=3 uid="uid://wryv2cnqwxbb"]
 
 [ext_resource type="Script" uid="uid://dq7hkeo5hb3qf" path="res://scripts/main.gd" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://b64qwuek2uxlt" path="res://scenes/character.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o5qli")
@@ -17,5 +16,18 @@ text = "THIS IS THE MAIN SCENE"
 wait_time = 300.0
 autostart = true
 
-[node name="character" parent="." instance=ExtResource("2_0wfyh")]
-position = Vector2(354, 418)
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bomb scene" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 222.0
+offset_right = 384.0
+offset_bottom = 253.0
+text = "go bomb game"
+
+[connection signal="pressed" from="Control/bomb scene" to="." method="_on_bomb_scene_pressed"]

@@ -1,186 +1,167 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgewkfpth40a2"]
+[gd_scene load_steps=3 format=3 uid="uid://bgewkfpth40a2"]
 
-[ext_resource type="Script" uid="uid://c80362ur0o5rf" path="res://scripts/keypad.gd" id="1_gjsb8"]
-[ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="2_1dgaj"]
-[ext_resource type="Script" uid="uid://bsbm5qhrjrdwp" path="res://scripts/keypadButton.gd" id="3_y3le2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_08hpx"]
-size = Vector2(27, 27)
+[ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="1_o2pmc"]
+[ext_resource type="Script" uid="uid://c80362ur0o5rf" path="res://scripts/keypad.gd" id="1_vxa2g"]
 
 [node name="keypad" type="Node2D"]
-script = ExtResource("1_gjsb8")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -22)
-scale = Vector2(0.773438, 1.34375)
-texture = ExtResource("2_1dgaj")
+script = ExtResource("1_vxa2g")
 
 [node name="correct sound" type="AudioStreamPlayer2D" parent="."]
 
 [node name="wrong sound" type="AudioStreamPlayer2D" parent="."]
 
-[node name="pressed button sound" type="AudioStreamPlayer2D" parent="."]
+[node name="key pressed" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(179, 159)
+scale = Vector2(1, 1.71094)
+texture = ExtResource("1_o2pmc")
 
 [node name="keys" type="Node2D" parent="."]
-position = Vector2(14, -30)
+position = Vector2(179, 201)
 
-[node name="key1" type="StaticBody2D" parent="keys"]
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key1"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key1"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key2" type="StaticBody2D" parent="keys"]
-position = Vector2(30, 0)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key2"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key2"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key3" type="StaticBody2D" parent="keys"]
-position = Vector2(59, 0)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key3"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key3"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key4" type="StaticBody2D" parent="keys"]
-position = Vector2(0, 28)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key4"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key4"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key5" type="StaticBody2D" parent="keys"]
-position = Vector2(29, 28)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key5"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key5"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key6" type="StaticBody2D" parent="keys"]
-position = Vector2(59, 29)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key6"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key6"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key7" type="StaticBody2D" parent="keys"]
-position = Vector2(29, 56)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key7"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key7"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key8" type="StaticBody2D" parent="keys"]
-position = Vector2(59, 57)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key8"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key8"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key clear" type="StaticBody2D" parent="keys"]
-position = Vector2(-1, 56)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key clear"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key clear"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key9" type="StaticBody2D" parent="keys"]
-position = Vector2(28, 87)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key9"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key9"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key0" type="StaticBody2D" parent="keys"]
-position = Vector2(-1, 86)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key0"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key0"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="key enter" type="StaticBody2D" parent="keys"]
-position = Vector2(59, 85)
-script = ExtResource("3_y3le2")
-
-[node name="Sprite2D" type="Sprite2D" parent="keys/key enter"]
-position = Vector2(-44.75, -16.5)
-scale = Vector2(0.199219, 0.210938)
-texture = ExtResource("2_1dgaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key enter"]
-position = Vector2(-44.5, -16.5)
-shape = SubResource("RectangleShape2D_08hpx")
-
-[node name="SubViewport" type="SubViewport" parent="."]
-
-[node name="password label" type="Label" parent="SubViewport"]
+[node name="key manager" type="Control" parent="keys"]
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 40.0
+
+[node name="key 1" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -59.0
+offset_top = -85.0
+offset_right = -26.0
+offset_bottom = -52.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 2" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -83.0
+offset_right = 16.0
+offset_bottom = -50.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 3" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = -82.0
+offset_right = 60.0
+offset_bottom = -49.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 4" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -60.0
+offset_top = -48.0
+offset_right = -27.0
+offset_bottom = -15.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 5" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -48.0
+offset_right = 16.0
+offset_bottom = -15.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 6" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -47.0
+offset_right = 59.0
+offset_bottom = -14.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 7" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -60.0
+offset_top = -13.0
+offset_right = -27.0
+offset_bottom = 20.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 8" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -14.0
+offset_right = 16.0
+offset_bottom = 19.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 9" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = -13.0
+offset_right = 58.0
+offset_bottom = 20.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key 0" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = 24.0
+offset_right = 16.0
+offset_bottom = 57.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key clear" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 22.0
+offset_right = -23.0
+offset_bottom = 55.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="key enter" type="TextureButton" parent="keys/key manager"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 56.0
+offset_bottom = 56.0
+texture_normal = ExtResource("1_o2pmc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="password field" type="Label" parent="."]
+offset_left = 137.0
+offset_top = 70.0
+offset_right = 225.0
+offset_bottom = 93.0
+text = "PASSWORD"
+
+[connection signal="pressed" from="keys/key manager/key 1" to="." method="_on_key_1_pressed"]
+[connection signal="pressed" from="keys/key manager/key 2" to="." method="_on_key_2_pressed"]
+[connection signal="pressed" from="keys/key manager/key 3" to="." method="_on_key_3_pressed"]
+[connection signal="pressed" from="keys/key manager/key 4" to="." method="_on_key_4_pressed"]
+[connection signal="pressed" from="keys/key manager/key 5" to="." method="_on_key_5_pressed"]
+[connection signal="pressed" from="keys/key manager/key 6" to="." method="_on_key_6_pressed"]
+[connection signal="pressed" from="keys/key manager/key 7" to="." method="_on_key_7_pressed"]
+[connection signal="pressed" from="keys/key manager/key 8" to="." method="_on_key_8_pressed"]
+[connection signal="pressed" from="keys/key manager/key 9" to="." method="_on_key_9_pressed"]
+[connection signal="pressed" from="keys/key manager/key 0" to="." method="_on_key_0_pressed"]
+[connection signal="pressed" from="keys/key manager/key clear" to="." method="_on_key_clear_pressed"]
+[connection signal="pressed" from="keys/key manager/key enter" to="." method="_on_key_enter_pressed"]

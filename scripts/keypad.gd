@@ -1,63 +1,96 @@
 extends Node2D
 
+
 var correctPassword = "1427"
 var attempt = ""
 
-signal onCorrectPassword
-signal onWrongPassword
-signal onClearPassword
-signal onKeypadPress
+@onready var passwordField: Label = $"password field"
+@onready var correctSound: AudioStreamPlayer2D = $"correct sound"
+@onready var wrongSound: AudioStreamPlayer2D = $"wrong sound"
+@onready var keyPressed: AudioStreamPlayer2D = $"key pressed"
 
-@onready var correct_sound: AudioStreamPlayer2D = $"correct sound"
-@onready var wrong_sound: AudioStreamPlayer2D = $"wrong sound"
-@onready var pressed_button_sound: AudioStreamPlayer2D = $"pressed button sound"
 
-var is_audio_playing = false
-
-@onready var keys: Node2D = $keys
-
-@onready var password_label: Label = $"SubViewport/password label"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for child in keys.get_children():
-		if child is StaticBody2D:
-			child.connect("onInteract", onButtonInteract)
-	password_label.text = ""
+	attempt = ""
 	
-func onButtonInteract(value) -> void:
-	if is_audio_playing:
-		return
-	is_audio_playing = true
-	pressed_button_sound.playing = true
-	
-#	hit the enter button
-	if value == "enter key":
-		if attempt == correctPassword:
-			correct_sound.play()
-			emit_signal("onCorrectPassword", attempt)
-		else:
-			wrong_sound.play()
-			emit_signal("onWrongPassword", attempt)
-		attempt = ""
-		
-#	hit the clear button
-	elif value == "clear":
-		emit_signal("onClearPassword", attempt)
-		attempt = ""
-	
-#	pressed a number
-	else:
-		if attempt.length() > correctPassword.length():
-			return
-		attempt += value
-		emit_signal("onKeypadPress", attempt)
-	
-	password_label.text = attempt
-
-	
-	
-func onInteract():
-	pass
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	passwordField.text = attempt
+	
+
+#handle each button type
+func _on_key_1_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "1"
+	keyPressed.play()
+
+
+
+
+
+func _on_key_2_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "2"
+	keyPressed.play()
+
+
+func _on_key_3_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "3"
+	keyPressed.play()
+
+
+func _on_key_4_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "4"
+	keyPressed.play()
+
+
+func _on_key_5_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "5"
+	keyPressed.play()
+
+
+func _on_key_6_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "6"
+	keyPressed.play()
+
+
+func _on_key_7_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "7"
+	keyPressed.play()
+
+
+func _on_key_8_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "8"
+	keyPressed.play()
+
+
+func _on_key_9_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "9"
+	keyPressed.play()
+
+
+func _on_key_0_pressed() -> void:
+	if attempt.length() < correctPassword.length():
+		attempt += "0"
+	keyPressed.play()
+
+
+func _on_key_clear_pressed() -> void:
+	attempt = ""
+	keyPressed.play()
+
+func _on_key_enter_pressed() -> void:
+	if attempt == correctPassword:
+		correctSound.play()
+	else:
+		attempt = ""
+		wrongSound.play()
