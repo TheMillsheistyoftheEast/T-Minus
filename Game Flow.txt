@@ -26,3 +26,5 @@ Blue Wire: Does Nothing
 Yellow: Kills Game
 
 
+Story: 
+Today's the day... January 4th, 2027. the sol mission - The first space mission to the sun is set for launch... I'm ready.
