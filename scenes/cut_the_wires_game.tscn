@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://bh38oconsd2op"]
+
+[ext_resource type="Script" uid="uid://wsr0sfxsas8k" path="res://scripts/cut_the_wires_game.gd" id="1_7eq61"]
+[ext_resource type="Texture2D" uid="uid://bjwj4f01iqji6" path="res://Assets/SimpleBombInsides.png" id="1_o3dvm"]
+[ext_resource type="Texture2D" uid="uid://dqa83mv5eier6" path="res://Assets/Blue.png" id="2_7eq61"]
+[ext_resource type="Texture2D" uid="uid://b6hqjiyfcf5k4" path="res://Assets/Red Wire.png" id="3_6wms8"]
+[ext_resource type="Texture2D" uid="uid://cli31mbljst86" path="res://Assets/Yellow wire.png" id="4_7waly"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8r0ps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7eq61")
+}],
+"loop": true,
+"name": &"Blue Wire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6wms8")
+}],
+"loop": true,
+"name": &"Red Wire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7waly")
+}],
+"loop": true,
+"name": &"Yellow Wire",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CutTheWiresGame" type="Node2D"]
+script = ExtResource("1_7eq61")
+
+[node name="Bomb Insides" type="Sprite2D" parent="."]
+scale = Vector2(65.5048, 75.6609)
+texture = ExtResource("1_o3dvm")
+
+[node name="Blue Wire" type="AnimatedSprite2D" parent="."]
+position = Vector2(3505.88, 314)
+scale = Vector2(15.3173, 7.7439)
+sprite_frames = SubResource("SpriteFrames_8r0ps")
+animation = &"Blue Wire"
+
+[node name="BlueTextureButton" type="TextureButton" parent="Blue Wire"]
+offset_left = -670.0
+offset_top = -411.0
+offset_right = 690.0
+offset_bottom = 420.0
+
+[node name="Red Wire" type="AnimatedSprite2D" parent="."]
+position = Vector2(3507, 7609)
+scale = Vector2(15.6955, 7.17572)
+sprite_frames = SubResource("SpriteFrames_8r0ps")
+animation = &"Red Wire"
+
+[node name="RedTextureButton" type="TextureButton" parent="Red Wire"]
+offset_left = -668.0
+offset_top = -423.0
+offset_right = 672.0
+offset_bottom = 436.0
+
+[node name="Yellow Wire" type="AnimatedSprite2D" parent="."]
+position = Vector2(3314.88, 13753.3)
+scale = Vector2(15.4119, 5.75776)
+sprite_frames = SubResource("SpriteFrames_8r0ps")
+animation = &"Yellow Wire"
+
+[node name="YellowTextureButton" type="TextureButton" parent="Yellow Wire"]
+offset_left = -677.0
+offset_top = -437.0
+offset_right = 698.0
+offset_bottom = 437.0
