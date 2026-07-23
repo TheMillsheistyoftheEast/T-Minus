@@ -1,0 +1,186 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgewkfpth40a2"]
+
+[ext_resource type="Script" uid="uid://c80362ur0o5rf" path="res://scripts/keypad.gd" id="1_gjsb8"]
+[ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="2_1dgaj"]
+[ext_resource type="Script" uid="uid://bsbm5qhrjrdwp" path="res://scripts/keypadButton.gd" id="3_y3le2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08hpx"]
+size = Vector2(27, 27)
+
+[node name="keypad" type="Node2D"]
+script = ExtResource("1_gjsb8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -22)
+scale = Vector2(0.773438, 1.34375)
+texture = ExtResource("2_1dgaj")
+
+[node name="correct sound" type="AudioStreamPlayer2D" parent="."]
+
+[node name="wrong sound" type="AudioStreamPlayer2D" parent="."]
+
+[node name="pressed button sound" type="AudioStreamPlayer2D" parent="."]
+
+[node name="keys" type="Node2D" parent="."]
+position = Vector2(14, -30)
+
+[node name="key1" type="StaticBody2D" parent="keys"]
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key1"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key1"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key2" type="StaticBody2D" parent="keys"]
+position = Vector2(30, 0)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key2"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key2"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key3" type="StaticBody2D" parent="keys"]
+position = Vector2(59, 0)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key3"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key3"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key4" type="StaticBody2D" parent="keys"]
+position = Vector2(0, 28)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key4"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key4"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key5" type="StaticBody2D" parent="keys"]
+position = Vector2(29, 28)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key5"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key5"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key6" type="StaticBody2D" parent="keys"]
+position = Vector2(59, 29)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key6"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key6"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key7" type="StaticBody2D" parent="keys"]
+position = Vector2(29, 56)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key7"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key7"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key8" type="StaticBody2D" parent="keys"]
+position = Vector2(59, 57)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key8"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key8"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key clear" type="StaticBody2D" parent="keys"]
+position = Vector2(-1, 56)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key clear"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key clear"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key9" type="StaticBody2D" parent="keys"]
+position = Vector2(28, 87)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key9"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key9"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key0" type="StaticBody2D" parent="keys"]
+position = Vector2(-1, 86)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key0"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key0"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="key enter" type="StaticBody2D" parent="keys"]
+position = Vector2(59, 85)
+script = ExtResource("3_y3le2")
+
+[node name="Sprite2D" type="Sprite2D" parent="keys/key enter"]
+position = Vector2(-44.75, -16.5)
+scale = Vector2(0.199219, 0.210938)
+texture = ExtResource("2_1dgaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keys/key enter"]
+position = Vector2(-44.5, -16.5)
+shape = SubResource("RectangleShape2D_08hpx")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="password label" type="Label" parent="SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
