@@ -1,2 +1,1 @@
-# gmtk-game-jam-2026
-
+#For Game Makers Tool Kit Game Jam 2026

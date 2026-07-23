@@ -19,4 +19,10 @@ Password for bomb 1427
 start > Intro  > Find Bomb > Number Puzzle > Bomb Opens > Wires > Final Puzzle 
 
 
+Wire Game:
+	Three wires Red, Blue, and Yellow.
+Red Wire: Correct (Nothing to indicate you did it right)
+Blue Wire: Does Nothing
+Yellow: Kills Game
+
 
