@@ -1,30 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgewkfpth40a2"]
+[gd_scene load_steps=17 format=3 uid="uid://bgewkfpth40a2"]
 
-[ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="1_o2pmc"]
 [ext_resource type="Script" uid="uid://c80362ur0o5rf" path="res://scripts/keypad.gd" id="1_vxa2g"]
+[ext_resource type="Texture2D" uid="uid://cr1tdhiyssahx" path="res://Assets/BombSpriteJustPad.png" id="2_08hpx"]
 [ext_resource type="AudioStream" uid="uid://up03b7snk57t" path="res://Assets/Sounds/10_ui_sfx_free_samples/013_Confirm_03.wav" id="2_y3le2"]
 [ext_resource type="AudioStream" uid="uid://j7mc5howqnu3" path="res://Assets/Sounds/10_ui_sfx_free_samples/033_Denied_03.wav" id="3_08hpx"]
 [ext_resource type="AudioStream" uid="uid://fpltdh74tdn6" path="res://Assets/Sounds/10_ui_sfx_free_samples/001_Hover_01.wav" id="4_2dn7d"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2dn7d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kqae8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x67r6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ef7rw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lv8uw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_birxu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ot4jy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fn4eu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lifyw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uigmn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_al87v"]
+
 [node name="keypad" type="Node2D"]
 script = ExtResource("1_vxa2g")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(153, 234)
+scale = Vector2(4.3, 4.3)
+texture = ExtResource("2_08hpx")
+
 [node name="correct sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(41, 102)
 stream = ExtResource("2_y3le2")
 
 [node name="wrong sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(41, 102)
 stream = ExtResource("3_08hpx")
 
 [node name="key pressed" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(41, 102)
 stream = ExtResource("4_2dn7d")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(179, 159)
-scale = Vector2(1, 1.71094)
-texture = ExtResource("1_o2pmc")
-
 [node name="keys" type="Node2D" parent="."]
-position = Vector2(179, 201)
+position = Vector2(220, 303)
 
 [node name="key manager" type="Control" parent="keys"]
 layout_mode = 3
@@ -32,131 +57,216 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="key 1" type="TextureButton" parent="keys/key manager"]
+[node name="key 1" type="Button" parent="keys/key manager"]
 layout_mode = 0
-offset_left = -59.0
-offset_top = -85.0
-offset_right = -26.0
-offset_bottom = -52.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+offset_left = -110.0
+offset_top = -129.0
+offset_right = -84.0
+offset_bottom = -99.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 2" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = -17.0
-offset_top = -83.0
-offset_right = 16.0
-offset_bottom = -50.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 2" type="Button" parent="keys/key manager"]
+offset_left = -80.0
+offset_top = -129.0
+offset_right = -54.0
+offset_bottom = -99.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 3" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = 27.0
-offset_top = -82.0
-offset_right = 60.0
-offset_bottom = -49.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 3" type="Button" parent="keys/key manager"]
+offset_left = -51.0
+offset_top = -129.0
+offset_right = -24.0
+offset_bottom = -99.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 4" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = -60.0
-offset_top = -48.0
-offset_right = -27.0
-offset_bottom = -15.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 4" type="Button" parent="keys/key manager"]
+offset_left = -110.0
+offset_top = -95.0
+offset_right = -84.0
+offset_bottom = -65.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 5" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = -17.0
-offset_top = -48.0
-offset_right = 16.0
-offset_bottom = -15.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 5" type="Button" parent="keys/key manager"]
+offset_left = -80.0
+offset_top = -95.0
+offset_right = -54.0
+offset_bottom = -65.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 6" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = -47.0
-offset_right = 59.0
-offset_bottom = -14.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 6" type="Button" parent="keys/key manager"]
+offset_left = -50.0
+offset_top = -95.0
+offset_right = -24.0
+offset_bottom = -65.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 7" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = -60.0
-offset_top = -13.0
-offset_right = -27.0
-offset_bottom = 20.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 7" type="Button" parent="keys/key manager"]
+offset_left = -110.0
+offset_top = -60.0
+offset_right = -84.0
+offset_bottom = -30.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 8" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = -17.0
-offset_top = -14.0
-offset_right = 16.0
-offset_bottom = 19.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 8" type="Button" parent="keys/key manager"]
+offset_left = -80.0
+offset_top = -60.0
+offset_right = -54.0
+offset_bottom = -30.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 9" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = 25.0
-offset_top = -13.0
-offset_right = 58.0
-offset_bottom = 20.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 9" type="Button" parent="keys/key manager"]
+offset_left = -50.0
+offset_top = -60.0
+offset_right = -24.0
+offset_bottom = -30.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key 0" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = -17.0
-offset_top = 24.0
-offset_right = 16.0
-offset_bottom = 57.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key 0" type="Button" parent="keys/key manager"]
+offset_left = -80.0
+offset_top = -164.0
+offset_right = -54.0
+offset_bottom = -133.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key clear" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = -56.0
-offset_top = 22.0
-offset_right = -23.0
-offset_bottom = 55.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key clear" type="Button" parent="keys/key manager"]
+offset_left = -102.0
+offset_top = -26.0
+offset_right = -71.0
+offset_bottom = 4.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
-[node name="key enter" type="TextureButton" parent="keys/key manager"]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 23.0
-offset_right = 56.0
-offset_bottom = 56.0
-texture_normal = ExtResource("1_o2pmc")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="key enter" type="Button" parent="keys/key manager"]
+offset_left = -63.0
+offset_top = -26.0
+offset_right = -32.0
+offset_bottom = 5.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2dn7d")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kqae8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x67r6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ef7rw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv8uw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_birxu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ot4jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fn4eu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lifyw")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
 [node name="password field" type="Label" parent="."]
-offset_left = 137.0
-offset_top = 70.0
-offset_right = 225.0
-offset_bottom = 93.0
+offset_left = 125.0
+offset_top = 77.0
+offset_right = 213.0
+offset_bottom = 100.0
 text = "PASSWORD"
 
 [connection signal="pressed" from="keys/key manager/key 1" to="." method="_on_key_1_pressed"]
