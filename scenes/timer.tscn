@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b0sw0joldlaqm"]
+[gd_scene load_steps=0 format=3 uid="uid://b0sw0joldlaqm"]
 
 [node name="Timer" type="Timer"]
 wait_time = 300.0
