@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://cdbibhpjwkr3i"]
+[gd_scene load_steps=2 format=3 uid="uid://cdbibhpjwkr3i"]
+
+[ext_resource type="Texture2D" uid="uid://dtbayhng3qct4" path="res://Assets/black background.png" id="1_ioskq"]
 
 [node name="Intro" type="Node2D"]
+
+[node name="Basic Background" type="Sprite2D" parent="."]
+position = Vector2(1416.25, 784)
+scale = Vector2(2.15632, 1.82483)
+texture = ExtResource("1_ioskq")
+
+[node name="Story" type="Label" parent="."]
+offset_left = 134.0
+offset_top = 16.0
+offset_right = 2038.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 57
+text = "Today's the day... 
+January 4th, 2027. 
+The sol mission - The first space mission to the sun is set for launch... 
+I'm ready."
