@@ -11,5 +11,5 @@ func _process(_delta: float) -> void:
 	pass
 
 #When the enter button is pressed go to first game
-func on_enter_pressed() -> void:
+func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/find_bomb_game.tscn")
