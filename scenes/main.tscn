@@ -1,24 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://wryv2cnqwxbb"]
+[gd_scene load_steps=6 format=3 uid="uid://wryv2cnqwxbb"]
 
 [ext_resource type="Script" uid="uid://dq7hkeo5hb3qf" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b0sw0joldlaqm" path="res://scenes/timer.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://cm4j538svw1ii" path="res://scenes/find_bomb_game.tscn" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bh38oconsd2op" path="res://scenes/cut_the_wires_game.tscn" id="4_tefeu"]
+[ext_resource type="PackedScene" uid="uid://djine4iupcy46" path="res://scenes/bomb_game.tscn" id="5_o6xl0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o5qli")
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="bomb scene button" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 252.0
-offset_top = 222.0
-offset_right = 384.0
-offset_bottom = 253.0
-text = "go bomb game"
 
 [node name="Timer" parent="." instance=ExtResource("2_0wfyh")]
 
@@ -29,4 +18,11 @@ offset_right = 360.0
 offset_bottom = 163.0
 text = "MAIN SCENE"
 
-[connection signal="pressed" from="Control/bomb scene button" to="." method="_on_bomb_scene_pressed"]
+[node name="Find Bomb Game" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(139, 384)
+
+[node name="CutTheWiresGame" parent="." instance=ExtResource("4_tefeu")]
+position = Vector2(550, 137)
+
+[node name="BombGame" parent="." instance=ExtResource("5_o6xl0")]
+position = Vector2(315, 122)
