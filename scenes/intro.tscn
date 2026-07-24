@@ -34,4 +34,6 @@ offset_right = 857.0
 offset_bottom = 804.0
 theme_override_fonts/font = ExtResource("3_i2l1n")
 theme_override_font_sizes/font_size = 49
-text = "Press Enter to continue"
+text = "Press Here to Continue!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
