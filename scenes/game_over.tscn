@@ -24,22 +24,22 @@ func _on_button_pressed() -> void:
 script = SubResource("GDScript_wqhvx")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(690, 466)
+position = Vector2(640, 448)
 texture = ExtResource("1_xeevv")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 552.0
-offset_top = 469.0
-offset_right = 744.0
-offset_bottom = 500.0
+offset_left = 344.0
+offset_top = 200.0
+offset_right = 536.0
+offset_bottom = 231.0
 text = "Press Here to Start over
 "
 
 [node name="Label" type="Label" parent="."]
-offset_left = 462.0
-offset_top = 276.0
-offset_right = 858.0
-offset_bottom = 359.0
+offset_left = 256.0
+offset_top = 56.0
+offset_right = 652.0
+offset_bottom = 139.0
 theme_override_font_sizes/font_size = 60
 text = "Game Over?!?"
 
