@@ -13,34 +13,35 @@ offset_bottom = 40.0
 
 [node name="start" type="Button" parent="button manager"]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 61.0
-offset_right = 120.0
-offset_bottom = 92.0
+offset_left = 348.0
+offset_top = 159.0
+offset_right = 503.0
+offset_bottom = 214.0
 text = "start"
 
 [node name="settings" type="Button" parent="button manager"]
 layout_mode = 0
-offset_left = 68.0
-offset_top = 109.0
-offset_right = 137.0
-offset_bottom = 140.0
+offset_left = 350.0
+offset_top = 239.0
+offset_right = 506.0
+offset_bottom = 277.0
 text = "settings"
 
 [node name="quit" type="Button" parent="button manager"]
 layout_mode = 0
-offset_left = 81.0
-offset_top = 161.0
-offset_right = 120.0
-offset_bottom = 192.0
+offset_left = 352.0
+offset_top = 293.0
+offset_right = 509.0
+offset_bottom = 392.0
 text = "quit
 "
 
-[node name="Label" type="Label" parent="."]
-offset_left = 62.0
-offset_top = 23.0
-offset_right = 124.0
-offset_bottom = 46.0
+[node name="Title" type="Label" parent="."]
+offset_left = 355.0
+offset_top = 101.0
+offset_right = 564.0
+offset_bottom = 159.0
+theme_override_font_sizes/font_size = 31
 text = "T-Minus"
 
 [connection signal="pressed" from="button manager/start" to="." method="_on_start_pressed"]
