@@ -21,8 +21,8 @@ SignalBus="*res://scripts/signal_bus.gd"
 
 [display]
 
-window/size/viewport_width=900
-window/size/viewport_height=500
+window/size/viewport_width=1000
+window/size/viewport_height=600
 
 [rendering]
 
