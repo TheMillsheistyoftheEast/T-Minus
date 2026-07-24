@@ -263,9 +263,9 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uigmn")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
 [node name="password field" type="Label" parent="."]
-offset_left = 125.0
+offset_left = 135.0
 offset_top = 77.0
-offset_right = 213.0
+offset_right = 223.0
 offset_bottom = 100.0
 text = "PASSWORD"
 

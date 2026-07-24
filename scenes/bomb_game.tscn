@@ -27,12 +27,13 @@ func _process(delta: float) -> void:
 script = SubResource("GDScript_huhyi")
 
 [node name="bomb" type="StaticBody2D" parent="."]
+position = Vector2(267, 67)
 script = ExtResource("1_wbx4c")
 
 [node name="Sprite2D" type="Sprite2D" parent="bomb"]
 position = Vector2(196, 170)
-scale = Vector2(4.27326, 4.27326)
+scale = Vector2(4.3, 4.3)
 texture = ExtResource("2_huhyi")
 
 [node name="keypad" parent="." instance=ExtResource("3_huhyi")]
-position = Vector2(43, -8)
+position = Vector2(310, 59)
