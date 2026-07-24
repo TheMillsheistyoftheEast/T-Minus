@@ -8,13 +8,13 @@
 script/source = "extends Button
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/keypad.tscn\")
+	get_tree().change_scene_to_file(\"res://scenes/bomb_game.tscn\")
 "
 
 [node name="Find Bomb Game" type="Node2D"]
 
 [node name="character" parent="." instance=ExtResource("1_gwuab")]
-position = Vector2(568, 581)
+position = Vector2(586, 417)
 
 [node name="Button" type="Button" parent="."]
 offset_right = 475.0
