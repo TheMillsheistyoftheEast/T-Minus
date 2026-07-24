@@ -12,7 +12,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="bomb scene" type="Button" parent="Control"]
+[node name="bomb scene button" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 252.0
 offset_top = 222.0
@@ -29,4 +29,4 @@ offset_right = 360.0
 offset_bottom = 163.0
 text = "MAIN SCENE"
 
-[connection signal="pressed" from="Control/bomb scene" to="." method="_on_bomb_scene_pressed"]
+[connection signal="pressed" from="Control/bomb scene button" to="." method="_on_bomb_scene_pressed"]

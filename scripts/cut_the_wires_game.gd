@@ -13,6 +13,7 @@ extends Node2D
 @onready var blue_post_cut: Sprite2D = $"blue wire/post cut"
 @onready var green_pre_cut: Sprite2D = $"green wire/pre cut"
 @onready var green_post_cut: Sprite2D = $"green wire/post cut"
+@onready var timer: Timer = $Timer
 
 signal blueWireCut
 signal redWireCut
@@ -36,7 +37,6 @@ func _process(_delta: float) -> void:
 
 
 func _on_red_wire_pressed() -> void:
-	print('nice choice')
 	red_pre_cut.hide()
 	red_post_cut.show()
 	redWireCut.emit()
