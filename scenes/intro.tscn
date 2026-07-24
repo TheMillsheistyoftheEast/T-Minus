@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdbibhpjwkr3i"]
 
-[ext_resource type="Script" path="res://scripts/intro.gd" id="1_i2l1n"]
+[ext_resource type="Script" uid="uid://dmnq0gv1u3hnr" path="res://scripts/intro.gd" id="1_i2l1n"]
 [ext_resource type="Texture2D" uid="uid://dtbayhng3qct4" path="res://Assets/black background.png" id="1_ioskq"]
 [ext_resource type="FontFile" uid="uid://bkiqrj0cpgqyh" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf" id="2_4bx60"]
 [ext_resource type="FontFile" uid="uid://rt3c2d1b875y" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf" id="3_i2l1n"]
