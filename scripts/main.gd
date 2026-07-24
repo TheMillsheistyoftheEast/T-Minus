@@ -2,11 +2,9 @@ extends Node
 
 
 @onready var timer: Timer = $Timer
-@onready var bomb_scene_btn: Button = $"Control/bomb scene"
+@onready var bomb_scene_button: Button = $"Control/bomb scene button"
 @onready var timeLabel: Label = $"time label"
-
-
-
+@onready var cutWiresGame: Node2D = $"../CutTheWiresGame"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
