@@ -1,50 +1,94 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh38oconsd2op"]
+[gd_scene load_steps=3 format=3 uid="uid://bh38oconsd2op"]
 
 [ext_resource type="Script" uid="uid://wsr0sfxsas8k" path="res://scripts/cut_the_wires_game.gd" id="1_7eq61"]
-[ext_resource type="Texture2D" uid="uid://bjwj4f01iqji6" path="res://Assets/SimpleBombInsides.png" id="1_o3dvm"]
-[ext_resource type="Texture2D" uid="uid://dqa83mv5eier6" path="res://Assets/Blue.png" id="2_7eq61"]
-[ext_resource type="Texture2D" uid="uid://b6hqjiyfcf5k4" path="res://Assets/Red Wire.png" id="3_6wms8"]
-[ext_resource type="Texture2D" uid="uid://cli31mbljst86" path="res://Assets/Yellow wire.png" id="4_7waly"]
+[ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="2_tjxa4"]
 
 [node name="CutTheWiresGame" type="Node2D"]
-scale = Vector2(-0.00629127, 0.00725544)
 script = ExtResource("1_7eq61")
 
-[node name="Bomb Insides" type="Sprite2D" parent="."]
-position = Vector2(-45585.6, 35363.5)
-scale = Vector2(65.5048, 75.6609)
-texture = ExtResource("1_o3dvm")
+[node name="bomb inside" type="Sprite2D" parent="."]
+position = Vector2(475, 347)
+scale = Vector2(2.875, 3.46875)
+texture = ExtResource("2_tjxa4")
 
-[node name="BlueTextureButton" type="TextureButton" parent="."]
-visibility_layer = 4
-offset_left = -52649.6
-offset_top = 31920.5
-offset_right = -31505.6
-offset_bottom = 37138.5
-texture_normal = ExtResource("2_7eq61")
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
+[node name="red wire" type="Button" parent="."]
+offset_left = 304.0
+offset_top = 220.0
+offset_right = 645.0
+offset_bottom = 251.0
+text = "RED WIRE"
 
-[node name="RedTextureButton" type="TextureButton" parent="."]
-visibility_layer = 4
-offset_left = -52660.6
-offset_top = 37248.5
-offset_right = -31703.6
-offset_bottom = 42440.5
-texture_normal = ExtResource("3_6wms8")
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
+[node name="pre cut" type="Sprite2D" parent="red wire"]
+position = Vector2(171, 15.5)
+scale = Vector2(2.64062, 0.226563)
+texture = ExtResource("2_tjxa4")
 
-[node name="YellowTextureButton" type="TextureButton" parent="."]
-light_mask = 4
-offset_left = -52704.6
-offset_top = 42426.5
-offset_right = -32245.6
-offset_bottom = 50773.5
-texture_normal = ExtResource("4_7waly")
-stretch_mode = 0
-metadata/_edit_use_anchors_ = true
+[node name="post cut" type="Sprite2D" parent="red wire"]
+visible = false
+position = Vector2(171, 14.5)
+rotation = 3.12812
+scale = Vector2(2.64063, 0.242188)
+texture = ExtResource("2_tjxa4")
 
-[connection signal="pressed" from="BlueTextureButton" to="." method="_on_blue_texture_button_pressed"]
-[connection signal="pressed" from="RedTextureButton" to="." method="_on_red_texture_button_pressed"]
-[connection signal="pressed" from="YellowTextureButton" to="." method="_on_yellow_texture_button_pressed"]
+[node name="yellow wire" type="Button" parent="."]
+offset_left = 307.0
+offset_top = 307.0
+offset_right = 645.0
+offset_bottom = 338.0
+text = "YELLOW WIRE"
+
+[node name="pre cut" type="Sprite2D" parent="yellow wire"]
+position = Vector2(171, 15.5)
+scale = Vector2(2.64062, 0.226563)
+texture = ExtResource("2_tjxa4")
+
+[node name="post cut" type="Sprite2D" parent="yellow wire"]
+visible = false
+position = Vector2(171, 14.5)
+rotation = 3.12812
+scale = Vector2(2.64063, 0.242188)
+texture = ExtResource("2_tjxa4")
+
+[node name="blue wire" type="Button" parent="."]
+offset_left = 311.0
+offset_top = 393.0
+offset_right = 646.0
+offset_bottom = 424.0
+text = "BLUE WIRE"
+
+[node name="pre cut" type="Sprite2D" parent="blue wire"]
+position = Vector2(171, 15.5)
+scale = Vector2(2.64062, 0.226563)
+texture = ExtResource("2_tjxa4")
+
+[node name="post cut" type="Sprite2D" parent="blue wire"]
+visible = false
+position = Vector2(171, 14.5)
+rotation = 3.12812
+scale = Vector2(2.64063, 0.242188)
+texture = ExtResource("2_tjxa4")
+
+[node name="green wire" type="Button" parent="."]
+offset_left = 311.0
+offset_top = 467.0
+offset_right = 641.0
+offset_bottom = 498.0
+text = "GREEN WIRE"
+
+[node name="pre cut" type="Sprite2D" parent="green wire"]
+position = Vector2(171, 15.5)
+scale = Vector2(2.64062, 0.226563)
+texture = ExtResource("2_tjxa4")
+
+[node name="post cut" type="Sprite2D" parent="green wire"]
+visible = false
+position = Vector2(171, 14.5)
+rotation = 3.12812
+scale = Vector2(2.64063, 0.242188)
+texture = ExtResource("2_tjxa4")
+
+[connection signal="blueWireCut" from="." to="." method="_on_blue_wire_cut"]
+[connection signal="pressed" from="red wire" to="." method="_on_red_wire_pressed"]
+[connection signal="pressed" from="yellow wire" to="." method="_on_yellow_wire_pressed"]
+[connection signal="pressed" from="blue wire" to="." method="_on_blue_wire_pressed"]
+[connection signal="pressed" from="green wire" to="." method="_on_green_wire_pressed"]

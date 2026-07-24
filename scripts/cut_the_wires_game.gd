@@ -1,9 +1,22 @@
 extends Node2D
 
-#create signal names
-signal cut_wire_blue
-signal cut_wire_red
-signal cut_wire_yellow
+
+@onready var redWire: Button = $"red wire"
+@onready var yellowWire: Button = $"yellow wire"
+@onready var blueWire: Button = $"blue wire"
+@onready var greenWire: Button = $"green wire"
+@onready var red_pre_cut: Sprite2D = $"red wire/pre cut"
+@onready var red_post_cut: Sprite2D = $"red wire/post cut"
+@onready var yellow_pre_cut: Sprite2D = $"yellow wire/pre cut"
+@onready var yellow_post_cut: Sprite2D = $"yellow wire/post cut"
+@onready var blue_pre_cut: Sprite2D = $"blue wire/pre cut"
+@onready var blue_post_cut: Sprite2D = $"blue wire/post cut"
+@onready var green_pre_cut: Sprite2D = $"green wire/pre cut"
+@onready var green_post_cut: Sprite2D = $"green wire/post cut"
+
+signal blueWireCut
+signal redWireCut
+signal yellowWireCut
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +24,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#If button is pressed change the animation to a cut wire and play a sound.
 	#send signal saying wire is cut
 	#check to see if it was correct wire. 
@@ -20,24 +33,27 @@ func _process(delta: float) -> void:
 	pass
 	
 #what to do when button is pressed
-func _on_blue_texture_button_pressed() -> void:
-	cut_wire_blue.emit()
-	
-func _on_red_texture_button_pressed() -> void:
-	cut_wire_red.emit()
 
-func _on_yellow_texture_button_pressed() -> void:
-	cut_wire_yellow.emit()
 
-#what happens when signal is recieved
-func _on_cut_wire_red() -> void:
-	print("red wire is cut")
-	#shut off bomb
+func _on_red_wire_pressed() -> void:
+	print('nice choice')
+	red_pre_cut.hide()
+	red_post_cut.show()
+	redWireCut.emit()
+
+
+func _on_yellow_wire_pressed() -> void:
+	print('crashout')
+	yellow_pre_cut.hide()
+	yellow_post_cut.show()
+	yellowWireCut.emit()
 	
-func _on_cut_wire_blue() -> void:
-	print("blue wire is cut")
-	#make timer go down faster
+func _on_blue_wire_pressed() -> void:
+	print('less time.. gulp!')
+	blue_pre_cut.hide()
+	blue_post_cut.show()
+	blueWireCut.emit()
 	
-func _on_cut_wire_yellow() -> void:
-	print("yellow wire is cut")
-	get_tree().quit()
+func _on_green_wire_pressed() -> void:
+	green_pre_cut.hide()
+	green_post_cut.show()
