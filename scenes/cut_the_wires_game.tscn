@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2wtwt7yw1mbb" path="res://icon.svg" id="2_tjxa4"]
 
 [node name="CutTheWiresGame" type="Node2D"]
+position = Vector2(-35, -100)
 script = ExtResource("1_7eq61")
 
 [node name="bomb inside" type="Sprite2D" parent="."]
