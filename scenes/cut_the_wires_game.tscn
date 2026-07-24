@@ -88,6 +88,10 @@ rotation = 3.12812
 scale = Vector2(2.64063, 0.242188)
 texture = ExtResource("2_tjxa4")
 
+[node name="time label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="pressed" from="red wire" to="." method="_on_red_wire_pressed"]
 [connection signal="pressed" from="yellow wire" to="." method="_on_yellow_wire_pressed"]
 [connection signal="pressed" from="blue wire" to="." method="_on_blue_wire_pressed"]

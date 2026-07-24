@@ -12,17 +12,45 @@ script = ExtResource("1_o5qli")
 [node name="Timer" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="time label" type="Label" parent="."]
-offset_left = 320.0
-offset_top = 140.0
-offset_right = 360.0
-offset_bottom = 163.0
-text = "MAIN SCENE"
+offset_left = 344.0
+offset_top = 112.0
+offset_right = 385.0
+offset_bottom = 135.0
+text = "00:00"
 
 [node name="Find Bomb Game" parent="." instance=ExtResource("3_tbgi4")]
-position = Vector2(139, 384)
+position = Vector2(25, 1073)
 
 [node name="CutTheWiresGame" parent="." instance=ExtResource("4_tefeu")]
-position = Vector2(550, 137)
+position = Vector2(2216, -24)
 
 [node name="BombGame" parent="." instance=ExtResource("5_o6xl0")]
-position = Vector2(315, 122)
+position = Vector2(2286, 909)
+
+[node name="go bomb" type="Button" parent="."]
+offset_left = 272.0
+offset_top = 262.0
+offset_right = 459.0
+offset_bottom = 293.0
+text = "take me to bomb game"
+
+[node name="go find" type="Button" parent="."]
+offset_left = 255.0
+offset_top = 212.0
+offset_right = 477.0
+offset_bottom = 243.0
+text = "take me to find bomb game"
+
+[node name="go wire" type="Button" parent="."]
+offset_left = 282.0
+offset_top = 306.0
+offset_right = 458.0
+offset_bottom = 337.0
+text = "take me to wire game"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(448, 256)
+
+[connection signal="pressed" from="go bomb" to="." method="_on_go_bomb_pressed"]
+[connection signal="pressed" from="go find" to="." method="_on_go_find_pressed"]
+[connection signal="pressed" from="go wire" to="." method="_on_go_wire_pressed"]

@@ -13,7 +13,8 @@ extends Node2D
 @onready var blue_post_cut: Sprite2D = $"blue wire/post cut"
 @onready var green_pre_cut: Sprite2D = $"green wire/pre cut"
 @onready var green_post_cut: Sprite2D = $"green wire/post cut"
-@onready var timer: Timer = $"./Timer"
+#@onready var timer: Timer = $"Timer"
+@onready var timeLabel: Label = $"time label"
 
 signal blueWireCut
 signal redWireCut
@@ -21,7 +22,9 @@ signal yellowWireCut
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	 # Replace with function body.
+	#print(timer)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
