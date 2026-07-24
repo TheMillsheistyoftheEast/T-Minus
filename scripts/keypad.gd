@@ -91,6 +91,7 @@ func _on_key_clear_pressed() -> void:
 func _on_key_enter_pressed() -> void:
 	if attempt == correctPassword:
 		correctSound.play()
+		get_tree().change_scene_to_file("res://scenes/cut_the_wires_game.tscn")
 	else:
 		attempt = ""
 		wrongSound.play()
