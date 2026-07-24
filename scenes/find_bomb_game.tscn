@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm4j538svw1ii"]
+[gd_scene load_steps=8 format=3 uid="uid://cm4j538svw1ii"]
 
 [ext_resource type="PackedScene" uid="uid://b64qwuek2uxlt" path="res://scenes/character.tscn" id="1_gwuab"]
 
@@ -11,6 +11,18 @@ func _on_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://scenes/bomb_game.tscn\")
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwuab"]
+size = Vector2(246, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijl5l"]
+size = Vector2(158, 501)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8maam"]
+size = Vector2(1009, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu7lq"]
+size = Vector2(953.5, 162)
+
 [node name="Find Bomb Game" type="Node2D"]
 
 [node name="character" parent="." instance=ExtResource("1_gwuab")]
@@ -21,5 +33,25 @@ offset_right = 475.0
 offset_bottom = 290.0
 icon = SubResource("PlaceholderTexture2D_gwuab")
 script = SubResource("GDScript_gwuab")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-124, 252)
+shape = SubResource("RectangleShape2D_gwuab")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(982, 253.5)
+shape = SubResource("RectangleShape2D_ijl5l")
+
+[node name="Up and Down" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up and Down"]
+position = Vector2(464, -16)
+shape = SubResource("RectangleShape2D_8maam")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Up and Down"]
+position = Vector2(463, 582)
+shape = SubResource("RectangleShape2D_vu7lq")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
