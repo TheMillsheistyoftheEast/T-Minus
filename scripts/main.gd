@@ -11,7 +11,13 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.start()
- 
+
+func _format_seconds(time : float) -> String:
+	var minutes := time / 60
+	var seconds := fmod(time, 60)
+
+	return "%02d:%02d" % [minutes, seconds]
+
 func startBomb() -> void:
 	timer.timeout.connect(gameOver)
 	
@@ -20,7 +26,7 @@ func gameOver() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	timeLabel.text = str(int(timer.time_left))
+	timeLabel.text = str(_format_seconds(timer.time_left))
 
 
 
