@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm4j538svw1ii"]
+
+[ext_resource type="PackedScene" uid="uid://b64qwuek2uxlt" path="res://scenes/character.tscn" id="1_gwuab"]
+
+[node name="Find Bomb Game" type="Node2D"]
+
+[node name="character" parent="." instance=ExtResource("1_gwuab")]
+position = Vector2(610, 575)
