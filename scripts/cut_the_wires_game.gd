@@ -59,3 +59,6 @@ func _on_blue_wire_pressed() -> void:
 func _on_green_wire_pressed() -> void:
 	green_pre_cut.hide()
 	green_post_cut.show()
+
+func recieve(blueWireCut):
+	print("done")
