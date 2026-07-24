@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdbibhpjwkr3i"]
+[gd_scene load_steps=5 format=3 uid="uid://cdbibhpjwkr3i"]
 
+[ext_resource type="Script" uid="uid://dmnq0gv1u3hnr" path="res://scripts/intro.gd" id="1_i2l1n"]
 [ext_resource type="Texture2D" uid="uid://dtbayhng3qct4" path="res://Assets/black background.png" id="1_ioskq"]
+[ext_resource type="FontFile" uid="uid://bkiqrj0cpgqyh" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf" id="2_4bx60"]
+[ext_resource type="FontFile" uid="uid://rt3c2d1b875y" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf" id="3_i2l1n"]
 
 [node name="Intro" type="Node2D"]
+script = ExtResource("1_i2l1n")
 
 [node name="Basic Background" type="Sprite2D" parent="."]
 position = Vector2(1416.25, 784)
@@ -15,8 +19,19 @@ offset_top = 16.0
 offset_right = 2038.0
 offset_bottom = 631.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_4bx60")
 theme_override_font_sizes/font_size = 57
 text = "Today's the day... 
 January 4th, 2027. 
-The sol mission - The first space mission to the sun is set for launch... 
+The Sol Mission:
+The first space mission to the sun is set for launch... 
 I'm ready."
+
+[node name="Instructions" type="Label" parent="."]
+offset_left = 170.0
+offset_top = 444.0
+offset_right = 350.0
+offset_bottom = 467.0
+theme_override_fonts/font = ExtResource("3_i2l1n")
+theme_override_font_sizes/font_size = 49
+text = "Press Enter to continue"
