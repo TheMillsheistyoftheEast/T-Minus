@@ -1,20 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://wryv2cnqwxbb"]
+[gd_scene load_steps=3 format=3 uid="uid://wryv2cnqwxbb"]
 
 [ext_resource type="Script" uid="uid://dq7hkeo5hb3qf" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://b0sw0joldlaqm" path="res://scenes/timer.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o5qli")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 221.0
-offset_top = 149.0
-offset_right = 261.0
-offset_bottom = 172.0
-text = "THIS IS THE MAIN SCENE"
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 300.0
-autostart = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -29,5 +19,14 @@ offset_top = 222.0
 offset_right = 384.0
 offset_bottom = 253.0
 text = "go bomb game"
+
+[node name="Timer" parent="." instance=ExtResource("2_0wfyh")]
+
+[node name="time label" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 140.0
+offset_right = 360.0
+offset_bottom = 163.0
+text = "MAIN SCENE"
 
 [connection signal="pressed" from="Control/bomb scene" to="." method="_on_bomb_scene_pressed"]
