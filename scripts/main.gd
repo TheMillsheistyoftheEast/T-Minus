@@ -7,18 +7,18 @@ extends Node
 @onready var camera2d: Camera2D = $Camera2D
 
 #cut wire game vars
-@onready var redWire: Button = $"red wire"
-@onready var yellowWire: Button = $"yellow wire"
-@onready var blueWire: Button = $"blue wire"
-@onready var greenWire: Button = $"green wire"
-@onready var red_pre_cut: Sprite2D = $"red wire/pre cut"
-@onready var red_post_cut: Sprite2D = $"red wire/post cut"
-@onready var yellow_pre_cut: Sprite2D = $"yellow wire/pre cut"
-@onready var yellow_post_cut: Sprite2D = $"yellow wire/post cut"
-@onready var blue_pre_cut: Sprite2D = $"blue wire/pre cut"
-@onready var blue_post_cut: Sprite2D = $"blue wire/post cut"
-@onready var green_pre_cut: Sprite2D = $"green wire/pre cut"
-@onready var green_post_cut: Sprite2D = $"green wire/post cut"
+@onready var redWire: Button = $"CutTheWiresGame/red wire"
+@onready var yellowWire: Button = $"CutTheWiresGame/yellow wire"
+@onready var blueWire: Button = $"CutTheWiresGame/blue wire"
+@onready var greenWire: Button = $"CutTheWiresGame/green wire"
+@onready var red_pre_cut: Sprite2D = $"CutTheWiresGame/red wire/pre cut"
+@onready var red_post_cut: Sprite2D = $"CutTheWiresGame/red wire/post cut"
+@onready var yellow_pre_cut: Sprite2D = $"CutTheWiresGame/yellow wire/pre cut"
+@onready var yellow_post_cut: Sprite2D = $"CutTheWiresGame/yellow wire/post cut"
+@onready var blue_pre_cut: Sprite2D = $"CutTheWiresGame/blue wire/pre cut"
+@onready var blue_post_cut: Sprite2D = $"CutTheWiresGame/blue wire/post cut"
+@onready var green_pre_cut: Sprite2D = $"CutTheWiresGame/green wire/pre cut"
+@onready var green_post_cut: Sprite2D = $"CutTheWiresGame/green wire/pre cut"
 #@onready var timer: Timer = $"Timer"
 #@onready var timeLabel: Label = $"time label"
 
@@ -26,10 +26,10 @@ extends Node
 var correctPassword = "1427"
 var attempt = ""
 #
-#@onready var passwordField: Label = $"password field"
-#@onready var correctSound: AudioStreamPlayer2D = $"correct sound"
-#@onready var wrongSound: AudioStreamPlayer2D = $"wrong sound"
-#@onready var keyPressed: AudioStreamPlayer2D = $"key pressed"
+@onready var passwordField: Label = $"BombGame/keypad/password field"
+@onready var correctSound: AudioStreamPlayer2D = $"BombGame/keypad/correct sound"
+@onready var wrongSound: AudioStreamPlayer2D = $"BombGame/keypad/wrong sound"
+@onready var keyPressed: AudioStreamPlayer2D = $"BombGame/keypad/key pressed"
 
 #find bomb game vars
 var direction := Input.get_axis("ui_left", "ui_right")
@@ -73,8 +73,8 @@ func _process(_delta: float) -> void:
 
 
 
-func _on_bomb_scene_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/bomb_game.tscn")
+#func _on_bomb_scene_pressed() -> void:
+	#get_tree().change_scene_to_file("res://scenes/bomb_game.tscn")
 
 
 func _on_go_bomb_pressed() -> void:

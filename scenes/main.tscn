@@ -12,10 +12,10 @@ script = ExtResource("1_o5qli")
 [node name="Timer" parent="." instance=ExtResource("2_0wfyh")]
 
 [node name="time label" type="Label" parent="."]
-offset_left = 344.0
-offset_top = 112.0
-offset_right = 385.0
-offset_bottom = 135.0
+offset_left = 264.0
+offset_top = 120.0
+offset_right = 305.0
+offset_bottom = 143.0
 text = "00:00"
 
 [node name="Find Bomb Game" parent="." instance=ExtResource("3_tbgi4")]
