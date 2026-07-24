@@ -65,7 +65,7 @@ func startBomb() -> void:
 	timer.start()
 	
 func gameOver() -> void:
-	pass
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
