@@ -4,9 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7yr4jq2sns1f" path="res://Assets/CockpitFloor.png" id="2_ijl5l"]
 [ext_resource type="Texture2D" uid="uid://b772mhiq1j3bn" path="res://Assets/Bomb_Overworld.png" id="2_vu7lq"]
 [ext_resource type="Texture2D" uid="uid://b0fm8g4klhhbm" path="res://Assets/CockpitWall.png" id="3_8maam"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_vu7lq"]
-radius = 7.63047
+[ext_resource type="Texture2D" uid="uid://cuse8eet3s50d" path="res://Assets/CockpitControls.png" id="4_2ukhv"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gwuab"]
 
@@ -21,7 +19,7 @@ func _on_pressed() -> void:
 size = Vector2(246, 500)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijl5l"]
-size = Vector2(158, 669)
+size = Vector2(274.815, 669)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ijl5l"]
 a = Vector2(582, -51)
@@ -53,9 +51,10 @@ position = Vector2(359.983, 10.5605)
 scale = Vector2(5, 5)
 texture = ExtResource("2_vu7lq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BombOverworld"]
-position = Vector2(0.200546, 0)
-shape = SubResource("CircleShape2D_vu7lq")
+[node name="CockpitControls" type="Sprite2D" parent="."]
+position = Vector2(656.793, 216.49)
+scale = Vector2(5.41685, 5.06446)
+texture = ExtResource("4_2ukhv")
 
 [node name="character" parent="." instance=ExtResource("1_gwuab")]
 position = Vector2(586, 417)
@@ -79,7 +78,8 @@ position = Vector2(-124, 252)
 shape = SubResource("RectangleShape2D_gwuab")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
-position = Vector2(996, 350)
+position = Vector2(937.593, 350)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ijl5l")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
