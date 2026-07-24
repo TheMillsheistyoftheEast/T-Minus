@@ -1,7 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://cm4j538svw1ii"]
+[gd_scene load_steps=15 format=3 uid="uid://cm4j538svw1ii"]
 
 [ext_resource type="PackedScene" uid="uid://b64qwuek2uxlt" path="res://scenes/character.tscn" id="1_gwuab"]
 [ext_resource type="Texture2D" uid="uid://7yr4jq2sns1f" path="res://Assets/CockpitFloor.png" id="2_ijl5l"]
+[ext_resource type="Texture2D" uid="uid://b772mhiq1j3bn" path="res://Assets/Bomb_Overworld.png" id="2_vu7lq"]
+[ext_resource type="Texture2D" uid="uid://b0fm8g4klhhbm" path="res://Assets/CockpitWall.png" id="3_8maam"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vu7lq"]
+radius = 7.63047
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gwuab"]
 
@@ -19,33 +24,49 @@ size = Vector2(246, 500)
 size = Vector2(158, 669)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ijl5l"]
-a = Vector2(590, -45)
-b = Vector2(918, 160)
+a = Vector2(582, -51)
+b = Vector2(935, 166)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8maam"]
 a = Vector2(585, 582)
-b = Vector2(926, 352)
+b = Vector2(944, 353)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8maam"]
 size = Vector2(414.75, 251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vu7lq"]
-size = Vector2(327.75, 249)
+size = Vector2(327.75, 194.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ukhv"]
 size = Vector2(813, 185)
 
 [node name="Find Bomb Game" type="Node2D"]
+scale = Vector2(0.99727, 1.04162)
 
 [node name="CockpitFloor" type="Sprite2D" parent="."]
 position = Vector2(459, 230)
 scale = Vector2(9.59149, 6.29243)
 texture = ExtResource("2_ijl5l")
 
+[node name="BombOverworld" type="Sprite2D" parent="."]
+position = Vector2(359.983, 10.5605)
+scale = Vector2(5, 5)
+texture = ExtResource("2_vu7lq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BombOverworld"]
+position = Vector2(0.200546, 0)
+shape = SubResource("CircleShape2D_vu7lq")
+
 [node name="character" parent="." instance=ExtResource("1_gwuab")]
 position = Vector2(586, 417)
 
+[node name="CockpitWall" type="Sprite2D" parent="."]
+position = Vector2(458, 231.5)
+scale = Vector2(9.53608, 6.06422)
+texture = ExtResource("3_8maam")
+
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_right = 292.0
 offset_bottom = 159.0
 icon = SubResource("PlaceholderTexture2D_gwuab")
@@ -58,7 +79,7 @@ position = Vector2(-124, 252)
 shape = SubResource("RectangleShape2D_gwuab")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
-position = Vector2(982, 337.5)
+position = Vector2(996, 350)
 shape = SubResource("RectangleShape2D_ijl5l")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
@@ -78,7 +99,7 @@ position = Vector2(494.625, -160)
 shape = SubResource("RectangleShape2D_8maam")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Up and Down"]
-position = Vector2(144.125, 489.5)
+position = Vector2(134, 515.25)
 shape = SubResource("RectangleShape2D_vu7lq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Up and Down"]
