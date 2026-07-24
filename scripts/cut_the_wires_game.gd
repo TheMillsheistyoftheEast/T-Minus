@@ -40,6 +40,7 @@ func _on_red_wire_pressed() -> void:
 	red_pre_cut.hide()
 	red_post_cut.show()
 	redWireCut.emit()
+	get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
 
 
 func _on_yellow_wire_pressed() -> void:
@@ -47,6 +48,7 @@ func _on_yellow_wire_pressed() -> void:
 	yellow_pre_cut.hide()
 	yellow_post_cut.show()
 	yellowWireCut.emit()
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	
 func _on_blue_wire_pressed() -> void:
 	print('less time.. gulp!')
