@@ -65,9 +65,10 @@ scale = Vector2(9.53608, 6.06422)
 texture = ExtResource("3_8maam")
 
 [node name="Button" type="Button" parent="."]
-visible = false
-offset_right = 292.0
-offset_bottom = 159.0
+offset_left = 317.0
+offset_top = -29.0
+offset_right = 401.0
+offset_bottom = 56.0
 icon = SubResource("PlaceholderTexture2D_gwuab")
 script = SubResource("GDScript_gwuab")
 
