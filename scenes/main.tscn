@@ -59,10 +59,10 @@ offset_bottom = 39.0
 text = "00:00"
 
 [node name="time label3" type="Label" parent="."]
-offset_left = 2616.0
-offset_top = 1024.0
-offset_right = 2657.0
-offset_bottom = 1047.0
+offset_left = 2728.0
+offset_top = 1043.0
+offset_right = 2769.0
+offset_bottom = 1066.0
 text = "00:00"
 
 [connection signal="pressedGoToBomb" from="Find Bomb Game" to="." method="_on_find_bomb_game_pressed_go_to_bomb"]
