@@ -11,13 +11,6 @@ script = ExtResource("1_o5qli")
 
 [node name="Timer" parent="." instance=ExtResource("2_0wfyh")]
 
-[node name="time label" type="Label" parent="."]
-offset_left = 264.0
-offset_top = 120.0
-offset_right = 305.0
-offset_bottom = 143.0
-text = "00:00"
-
 [node name="Find Bomb Game" parent="." instance=ExtResource("3_tbgi4")]
 position = Vector2(25, 1073)
 
@@ -50,6 +43,13 @@ text = "take me to wire game"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(448, 256)
+
+[node name="time label" type="Label" parent="Camera2D"]
+offset_left = -168.0
+offset_top = -120.0
+offset_right = -127.0
+offset_bottom = -97.0
+text = "00:00"
 
 [connection signal="pressed" from="go bomb" to="." method="_on_go_bomb_pressed"]
 [connection signal="pressed" from="go find" to="." method="_on_go_find_pressed"]

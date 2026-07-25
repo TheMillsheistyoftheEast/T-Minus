@@ -2,7 +2,7 @@ extends Node
 
 
 @onready var timer: Timer = $Timer
-@onready var timeLabel: Label = $"time label"
+@onready var timeLabel: Label = $"Camera2D/time label"
 #@onready var cut_the_wires_game: Node2D = $CutTheWiresGame
 @onready var camera2d: Camera2D = $Camera2D
 
