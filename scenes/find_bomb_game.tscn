@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cm4j538svw1ii"]
+[gd_scene load_steps=15 format=3 uid="uid://cm4j538svw1ii"]
 
 [ext_resource type="PackedScene" uid="uid://b64qwuek2uxlt" path="res://scenes/character.tscn" id="1_gwuab"]
 [ext_resource type="Script" uid="uid://cihkc3qlu53bw" path="res://scripts/find_bomb_game.gd" id="1_uv63m"]
@@ -8,9 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cuse8eet3s50d" path="res://Assets/CockpitControls.png" id="4_2ukhv"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gwuab"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_uv63m"]
-radius = 8.40238
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwuab"]
 size = Vector2(246, 500)
@@ -55,11 +52,6 @@ texture = ExtResource("2_ijl5l")
 position = Vector2(374.17, 123.498)
 scale = Vector2(5, 5)
 texture = ExtResource("2_vu7lq")
-
-[node name="Bomb Collider" type="CollisionShape2D" parent="."]
-position = Vector2(373, 129)
-scale = Vector2(5, 5)
-shape = SubResource("CircleShape2D_uv63m")
 
 [node name="CockpitControls" type="Sprite2D" parent="."]
 position = Vector2(670.98, 329.427)

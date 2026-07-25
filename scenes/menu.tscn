@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8hfjovk3jjmd"]
+[gd_scene load_steps=10 format=3 uid="uid://c8hfjovk3jjmd"]
 
 [ext_resource type="Script" uid="uid://bp312s0lm5gjr" path="res://scripts/menu.gd" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://bh4e6rgevgoil" path="res://Assets/menu screen background.png" id="2_mhnvy"]
+[ext_resource type="FontFile" uid="uid://rt3c2d1b875y" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf" id="3_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://hf657do8jyxd" path="res://Assets/Start.png" id="4_v86rl"]
+[ext_resource type="Texture2D" uid="uid://dm8rrdggqwn43" path="res://Assets/Rocket.png" id="5_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://bmi1d58vktpym" path="res://Assets/Quit.png" id="5_13sgg"]
+[ext_resource type="FontFile" uid="uid://dkyaakdxqp2m5" path="res://Assets/Fonts/Bitcount-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="6_v86rl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6lef"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70i5f"]
 
 [node name="menu" type="Node2D"]
 script = ExtResource("1_yqeox")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(537.1, 297.5)
+scale = Vector2(5.99, 5.99)
+texture = ExtResource("2_mhnvy")
 
 [node name="button manager" type="Control" parent="."]
 layout_mode = 3
@@ -13,36 +28,47 @@ offset_bottom = 40.0
 
 [node name="start" type="Button" parent="button manager"]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 128.0
-offset_right = 475.0
-offset_bottom = 183.0
-text = "start"
+offset_left = 368.0
+offset_top = 240.0
+offset_right = 494.0
+offset_bottom = 303.0
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i6lef")
 
-[node name="settings" type="Button" parent="button manager"]
-layout_mode = 0
-offset_left = 320.0
-offset_top = 192.0
-offset_right = 475.0
-offset_bottom = 247.0
-text = "settings"
+[node name="Start" type="Sprite2D" parent="button manager"]
+position = Vector2(430, 272)
+scale = Vector2(3.9375, 3.9375)
+texture = ExtResource("4_v86rl")
 
 [node name="quit" type="Button" parent="button manager"]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 256.0
-offset_right = 475.0
-offset_bottom = 311.0
-text = "quit
+offset_left = 366.0
+offset_top = 331.0
+offset_right = 492.0
+offset_bottom = 394.0
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_70i5f")
+text = "
 "
 
+[node name="Quit" type="Sprite2D" parent="button manager"]
+position = Vector2(430, 362)
+scale = Vector2(3.9375, 3.9375)
+texture = ExtResource("5_13sgg")
+
 [node name="Title" type="Label" parent="."]
-offset_left = 320.0
-offset_top = 64.0
-offset_right = 472.0
-offset_bottom = 120.0
-theme_override_font_sizes/font_size = 30
+offset_left = 327.0
+offset_top = 142.0
+offset_right = 533.0
+offset_bottom = 202.0
+theme_override_fonts/font = ExtResource("6_v86rl")
+theme_override_font_sizes/font_size = 49
 text = "T-Minus"
+
+[node name="spaceship" type="Sprite2D" parent="."]
+position = Vector2(186, 356)
+scale = Vector2(5.99, 5.99)
+texture = ExtResource("5_4ytvr")
 
 [connection signal="pressed" from="button manager/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="button manager/quit" to="." method="_on_quit_pressed"]

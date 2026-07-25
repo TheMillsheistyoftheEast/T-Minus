@@ -93,7 +93,7 @@ func _on_go_bomb_pressed() -> void:
 
 func _on_go_find_pressed() -> void:
 	camera2d.position.x = 472.0
-	camera2d.position.y = 1312.0
+	camera2d.position.y = 1412.0
 	inBombFind = true
 	inBombGame = false
 	inWireGame = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bh38oconsd2op"]
+[gd_scene load_steps=55 format=3 uid="uid://bh38oconsd2op"]
 
 [ext_resource type="Script" uid="uid://wsr0sfxsas8k" path="res://scripts/cut_the_wires_game.gd" id="1_7eq61"]
 [ext_resource type="Texture2D" uid="uid://b3672gr57nvpf" path="res://Assets/BombRealInards.png" id="2_jnq1j"]
@@ -11,6 +11,94 @@
 [ext_resource type="Texture2D" uid="uid://cc6axj83mkobu" path="res://Assets/GreenWire1.png" id="9_43uhu"]
 [ext_resource type="Texture2D" uid="uid://fc006ayrsjqp" path="res://Assets/GreenWire2.png" id="10_cqprt"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnq1j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hl7m3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5i83r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pqlkw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iex86"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_spo6b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5nphq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43uhu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqprt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qb2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdb87"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqrlg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_16lt8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2x408"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_da15n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j1pvu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbd1g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s8m56"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bwxh6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aflhj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjpyi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfro5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7kdca"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7e8vr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp1dt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1cv1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bacs6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlojd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6m6in"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iic7h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5souk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vp1y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dupfu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftp65"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3w7qh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4w2t0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bt4wq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvuan"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xhis0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w00xy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36wev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_armek"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1w0r4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kw7ec"]
+
 [node name="CutTheWiresGame" type="Node2D"]
 position = Vector2(-35, -100)
 script = ExtResource("1_7eq61")
@@ -21,79 +109,120 @@ scale = Vector2(6, 6)
 texture = ExtResource("2_jnq1j")
 
 [node name="red wire" type="Button" parent="."]
-offset_left = 304.0
-offset_top = 220.0
-offset_right = 645.0
-offset_bottom = 251.0
-text = "RED WIRE"
+offset_left = 275.0
+offset_top = 332.0
+offset_right = 467.0
+offset_bottom = 363.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jnq1j")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hl7m3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5i83r")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_pqlkw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_iex86")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_spo6b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5nphq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_43uhu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cqprt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2qb2o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xdb87")
 
 [node name="pre cut" type="Sprite2D" parent="red wire"]
-position = Vector2(171, 15.5)
-scale = Vector2(2.64062, 0.226563)
+position = Vector2(184, 1.90735e-06)
+scale = Vector2(2.64062, 2.17949)
 texture = ExtResource("3_hl7m3")
 
 [node name="post cut" type="Sprite2D" parent="red wire"]
 visible = false
-position = Vector2(171, 14.5)
+position = Vector2(424, -8.00001)
 rotation = 3.12812
-scale = Vector2(2.64063, 0.242188)
+scale = Vector2(2.64063, 2.17723)
 texture = ExtResource("4_5i83r")
 
 [node name="yellow wire" type="Button" parent="."]
-offset_left = 307.0
-offset_top = 307.0
-offset_right = 645.0
-offset_bottom = 338.0
-text = "YELLOW WIRE"
+offset_left = 491.0
+offset_top = 412.0
+offset_right = 829.0
+offset_bottom = 443.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cqrlg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_16lt8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2x408")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_da15n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_j1pvu")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nbd1g")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_s8m56")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_bwxh6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_aflhj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_bjpyi")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jfro5")
 
 [node name="pre cut" type="Sprite2D" parent="yellow wire"]
-position = Vector2(171, 15.5)
-scale = Vector2(2.64062, 0.226563)
+position = Vector2(-64, 2.01166e-06)
+rotation = -0.261799
+scale = Vector2(2.64062, 1.85687)
 texture = ExtResource("5_pqlkw")
 
 [node name="post cut" type="Sprite2D" parent="yellow wire"]
 visible = false
-position = Vector2(171, 14.5)
+position = Vector2(200, 24)
 rotation = 3.12812
-scale = Vector2(2.64063, 0.242188)
+scale = Vector2(2.64063, 2.20779)
 texture = ExtResource("6_iex86")
 
 [node name="blue wire" type="Button" parent="."]
-offset_left = 311.0
-offset_top = 393.0
-offset_right = 646.0
-offset_bottom = 424.0
-text = "BLUE WIRE"
+offset_left = 603.0
+offset_top = 372.0
+offset_right = 938.0
+offset_bottom = 403.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7kdca")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7e8vr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cp1dt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1cv1b")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bacs6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rlojd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6m6in")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_iic7h")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5souk")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_7vp1y")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dupfu")
 
 [node name="pre cut" type="Sprite2D" parent="blue wire"]
-position = Vector2(171, 15.5)
-scale = Vector2(2.64062, 0.226563)
+position = Vector2(-86, 24)
+scale = Vector2(2.64062, 1.97226)
 texture = ExtResource("7_spo6b")
 
 [node name="post cut" type="Sprite2D" parent="blue wire"]
 visible = false
-position = Vector2(171, 14.5)
-rotation = 3.12812
-scale = Vector2(2.64063, 0.242188)
+position = Vector2(168, 48)
+scale = Vector2(2.64063, 2.21967)
 texture = ExtResource("8_5nphq")
 
 [node name="green wire" type="Button" parent="."]
-offset_left = 311.0
-offset_top = 467.0
-offset_right = 641.0
-offset_bottom = 498.0
-text = "GREEN WIRE"
+offset_left = 611.0
+offset_top = 468.0
+offset_right = 941.0
+offset_bottom = 499.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ftp65")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3w7qh")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4w2t0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_bt4wq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mvuan")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_xhis0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_w00xy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_36wev")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_armek")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1w0r4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kw7ec")
 
 [node name="pre cut" type="Sprite2D" parent="green wire"]
-position = Vector2(171, 15.5)
-scale = Vector2(2.64062, 0.226563)
+position = Vector2(-111.034, 22.2785)
+rotation = 1.0472
+scale = Vector2(2.64062, 3.64898)
 texture = ExtResource("9_43uhu")
 
 [node name="post cut" type="Sprite2D" parent="green wire"]
 visible = false
-position = Vector2(171, 14.5)
-rotation = 3.12812
-scale = Vector2(2.64063, 0.242188)
+position = Vector2(-114.562, 23.1356)
+rotation = 4.18878
+scale = Vector2(2.64063, 3.87945)
 texture = ExtResource("10_cqprt")
 
 [node name="time label" type="Label" parent="."]
