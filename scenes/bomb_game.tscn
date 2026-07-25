@@ -7,20 +7,10 @@
 [sub_resource type="GDScript" id="GDScript_huhyi"]
 script/source = "extends Node2D
 
-enum STATE {
-	COMPLETE,
-	INCOMPLETE
-}
-var state = STATE.INCOMPLETE
+signal gotRightPasswordBombGame
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func _on_keypad_got_right_password_keypad() -> void:
+	gotRightPasswordBombGame.emit()
 "
 
 [node name="BombGame" type="Node2D"]
@@ -37,3 +27,5 @@ texture = ExtResource("2_huhyi")
 
 [node name="keypad" parent="." instance=ExtResource("3_huhyi")]
 position = Vector2(310, 59)
+
+[connection signal="gotRightPasswordKeypad" from="keypad" to="." method="_on_keypad_got_right_password_keypad"]

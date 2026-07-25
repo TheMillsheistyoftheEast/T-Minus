@@ -20,8 +20,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_4bx60")
 theme_override_font_sizes/font_size = 30
 text = "Today's the day... 
-January 4th, 2027. 
-The Sol Mission - 
+1/4/2027. 
+Operation Red Sol - 
 the first space mission to
  the sun - is set for launch... 
 I'm ready."

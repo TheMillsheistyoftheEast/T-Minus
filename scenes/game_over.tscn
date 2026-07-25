@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5ymkhdrgl282"]
+[gd_scene load_steps=4 format=3 uid="uid://b5ymkhdrgl282"]
 
 [ext_resource type="Texture2D" uid="uid://dtbayhng3qct4" path="res://Assets/black background.png" id="1_xeevv"]
+[ext_resource type="PackedScene" uid="uid://d0ugm705a7xhf" path="res://scenes/big_explosion.tscn" id="2_wqhvx"]
 
 [sub_resource type="GDScript" id="GDScript_wqhvx"]
 script/source = "extends Node2D
@@ -42,5 +43,10 @@ offset_right = 652.0
 offset_bottom = 139.0
 theme_override_font_sizes/font_size = 60
 text = "Game Over?!?"
+
+[node name="big explosion" parent="." instance=ExtResource("2_wqhvx")]
+position = Vector2(448, 152)
+scale = Vector2(2.83333, 2.83333)
+autoplay = "default"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

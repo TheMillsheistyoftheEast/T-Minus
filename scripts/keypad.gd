@@ -9,7 +9,7 @@ var attempt = ""
 @onready var wrongSound: AudioStreamPlayer2D = $"wrong sound"
 @onready var keyPressed: AudioStreamPlayer2D = $"key pressed"
 
-
+signal gotRightPasswordKeypad
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -91,7 +91,7 @@ func _on_key_clear_pressed() -> void:
 func _on_key_enter_pressed() -> void:
 	if attempt == correctPassword:
 		correctSound.play()
-		get_tree().change_scene_to_file("res://scenes/cut_the_wires_game.tscn")
+		gotRightPasswordKeypad.emit()
 	else:
 		attempt = ""
 		wrongSound.play()

@@ -44,13 +44,30 @@ text = "take me to wire game"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(448, 256)
 
-[node name="time label" type="Label" parent="Camera2D"]
-offset_left = -168.0
-offset_top = -120.0
-offset_right = -127.0
-offset_bottom = -97.0
+[node name="time label" type="Label" parent="."]
+offset_left = 2648.0
+offset_top = 184.0
+offset_right = 2689.0
+offset_bottom = 207.0
 text = "00:00"
 
+[node name="time label2" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 16.0
+offset_right = 153.0
+offset_bottom = 39.0
+text = "00:00"
+
+[node name="time label3" type="Label" parent="."]
+offset_left = 2616.0
+offset_top = 1024.0
+offset_right = 2657.0
+offset_bottom = 1047.0
+text = "00:00"
+
+[connection signal="pressedGoToBomb" from="Find Bomb Game" to="." method="_on_find_bomb_game_pressed_go_to_bomb"]
+[connection signal="blueWireCut" from="CutTheWiresGame" to="." method="_on_cut_the_wires_game_blue_wire_cut"]
+[connection signal="gotRightPasswordBombGame" from="BombGame" to="." method="_on_bomb_game_got_right_password_bomb_game"]
 [connection signal="pressed" from="go bomb" to="." method="_on_go_bomb_pressed"]
 [connection signal="pressed" from="go find" to="." method="_on_go_find_pressed"]
 [connection signal="pressed" from="go wire" to="." method="_on_go_wire_pressed"]

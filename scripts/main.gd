@@ -2,7 +2,10 @@ extends Node
 
 
 @onready var timer: Timer = $Timer
-@onready var timeLabel: Label = $"Camera2D/time label"
+@onready var timeLabel: Label = $"time label"
+@onready var timeLabel_2: Label = $"time label2"
+@onready var timeLabel_3: Label = $"time label3"
+
 #@onready var cut_the_wires_game: Node2D = $CutTheWiresGame
 @onready var camera2d: Camera2D = $Camera2D
 
@@ -70,6 +73,8 @@ func gameOver() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	timeLabel.text = str(_format_seconds(timer.time_left))
+	timeLabel_2.text = str(_format_seconds(timer.time_left))
+	timeLabel_3.text = str(_format_seconds(timer.time_left))
 
 
 
@@ -101,5 +106,24 @@ func _on_go_wire_pressed() -> void:
 	inWireGame = true
 	inBombFind = false
 	inBombGame = false
-	timeLabel.position.x = 2800.0
-	timeLabel.position.y = 256.0
+
+
+func _on_find_bomb_game_pressed_go_to_bomb() -> void:
+	camera2d.position.x = 2744.0
+	camera2d.position.y = 1136.0
+	inBombGame = true
+	inBombFind = false
+	inWireGame = false
+	startBomb()
+
+
+func _on_bomb_game_got_right_password_bomb_game() -> void:
+	camera2d.position.x = 2704.0
+	camera2d.position.y = 256.0
+	inWireGame = true
+	inBombFind = false
+	inBombGame = false
+
+
+func _on_cut_the_wires_game_blue_wire_cut() -> void:
+	timer.start(timer.time_left - 120.0)

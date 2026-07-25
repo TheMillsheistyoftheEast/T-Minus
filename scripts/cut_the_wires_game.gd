@@ -15,6 +15,7 @@ extends Node2D
 @onready var green_post_cut: Sprite2D = $"green wire/post cut"
 #@onready var timer: Timer = $"Timer"
 @onready var timeLabel: Label = $"time label"
+@onready var messages: Label = $messages
 
 signal blueWireCut
 signal redWireCut
@@ -58,6 +59,7 @@ func _on_blue_wire_pressed() -> void:
 	blue_pre_cut.hide()
 	blue_post_cut.show()
 	blueWireCut.emit()
+	messages.text = "Uh oh, wrong wire! There's less time left now! I better hurry."
 	
 func _on_green_wire_pressed() -> void:
 	green_pre_cut.hide()
