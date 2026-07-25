@@ -275,9 +275,9 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_al87v")
 
 [node name="password field" type="Label" parent="."]
 offset_left = 135.0
-offset_top = 96.0
+offset_top = 94.0
 offset_right = 223.0
-offset_bottom = 119.0
+offset_bottom = 117.0
 text = "PASSWORD"
 
 [connection signal="pressed" from="keys/key manager/key 1" to="." method="_on_key_1_pressed"]
