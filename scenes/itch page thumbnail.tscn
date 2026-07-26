@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://cot2pupbkwhaa"]
+
+[ext_resource type="Texture2D" uid="uid://bh4e6rgevgoil" path="res://Assets/menu screen background.png" id="1_d6qdv"]
+[ext_resource type="Texture2D" uid="uid://bu6te8p7tpn23" path="res://Assets/Astronaut-SheetAllDirections.png" id="2_bdri1"]
+[ext_resource type="Texture2D" uid="uid://bave1a4lp3uu" path="res://Assets/BombSpritePad.png" id="3_tyygm"]
+[ext_resource type="FontFile" uid="uid://dkyaakdxqp2m5" path="res://Assets/Fonts/Bitcount-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="4_a0n1b"]
+[ext_resource type="Texture2D" uid="uid://dm8rrdggqwn43" path="res://Assets/Rocket.png" id="5_uvhrj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s2mo"]
+atlas = ExtResource("2_bdri1")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tuvah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s2mo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(297.588, 165.66)
+scale = Vector2(3.2732, 3.2732)
+texture = ExtResource("1_d6qdv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(172, 192)
+rotation = -0.378648
+scale = Vector2(2.44444, 2.44444)
+sprite_frames = SubResource("SpriteFrames_tuvah")
+
+[node name="BombSpritePad" type="Sprite2D" parent="."]
+position = Vector2(273, 194)
+rotation = 0.247287
+scale = Vector2(0.857892, 0.857891)
+texture = ExtResource("3_tyygm")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 97.0
+offset_top = 85.0
+offset_right = 303.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("4_a0n1b")
+theme_override_font_sizes/font_size = 49
+text = "T-Minus"
+
+[node name="Rocket" type="Sprite2D" parent="."]
+position = Vector2(343, 101)
+rotation = -1.95986
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("5_uvhrj")

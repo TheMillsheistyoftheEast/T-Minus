@@ -1,21 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://djine4iupcy46"]
+[gd_scene load_steps=7 format=3 uid="uid://djine4iupcy46"]
 
 [ext_resource type="Texture2D" uid="uid://clpw3qkoqqclw" path="res://Assets/flooring backgrount tminus.png" id="1_qk3n1"]
 [ext_resource type="Script" uid="uid://6d5majy8hicm" path="res://scripts/bombDone.gd" id="1_wbx4c"]
 [ext_resource type="Texture2D" uid="uid://bave1a4lp3uu" path="res://Assets/BombSpritePad.png" id="2_huhyi"]
 [ext_resource type="PackedScene" uid="uid://bgewkfpth40a2" path="res://scenes/keypad.tscn" id="3_huhyi"]
+[ext_resource type="AudioStream" uid="uid://brbpvnriywrib" path="res://Assets/Sounds/beep.mp3" id="5_oy2c5"]
 
 [sub_resource type="GDScript" id="GDScript_huhyi"]
 script/source = "extends Node2D
 
 signal gotRightPasswordBombGame
+@onready var bombTickBeep: AudioStreamPlayer2D = $\"bomb tick beep\"
 
 func _on_keypad_got_right_password_keypad() -> void:
 	gotRightPasswordBombGame.emit()
+
+
+
+func _on_one_sec_timer_timeout() -> void:
+	bombTickBeep.play()
 "
 
 [node name="BombGame" type="Node2D"]
 script = SubResource("GDScript_huhyi")
+
+[node name="one sec timer" type="Timer" parent="."]
+autostart = true
 
 [node name="FlooringBackgrountTminus" type="Sprite2D" parent="."]
 position = Vector2(492, 452)
@@ -43,4 +53,8 @@ text = "What?! Is this a bomb?! On my spaceship?!
 I better defuse this, quick, or there won't be any January 4th launch!"
 horizontal_alignment = 1
 
+[node name="bomb tick beep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_oy2c5")
+
+[connection signal="timeout" from="one sec timer" to="." method="_on_one_sec_timer_timeout"]
 [connection signal="gotRightPasswordKeypad" from="keypad" to="." method="_on_keypad_got_right_password_keypad"]

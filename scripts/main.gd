@@ -5,6 +5,7 @@ extends Node
 @onready var timeLabel: Label = $"time label"
 #@onready var timeLabel_2: Label = $"time label2"
 @onready var timeLabel_3: Label = $"time label3"
+#@onready var dashboard: Node2D = $dashboard
 
 #@onready var cut_the_wires_game: Node2D = $CutTheWiresGame
 @onready var camera2d: Camera2D = $Camera2D
@@ -51,6 +52,8 @@ var inBombGame = false
 var inBombFind = false
 var inWireGame = false
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#timer.start()
@@ -75,6 +78,10 @@ func _process(_delta: float) -> void:
 	timeLabel.text = str(_format_seconds(timer.time_left))
 	#timeLabel_2.text = str(_format_seconds(timer.time_left))
 	timeLabel_3.text = str(_format_seconds(timer.time_left))
+	#if dashboard.inDash:
+		#if Input.is_action_just_pressed("interact"):
+			#camera2d.position.x = 472.0
+			#camera2d.position.y = 1412.0
 
 
 
@@ -127,3 +134,8 @@ func _on_bomb_game_got_right_password_bomb_game() -> void:
 
 func _on_cut_the_wires_game_blue_wire_cut() -> void:
 	timer.start(timer.time_left - 120.0)
+
+
+func _on_find_bomb_game_pressed_control_dashboard() -> void:
+	camera2d.position.x = 725.0
+	camera2d.position.y = 1792.0

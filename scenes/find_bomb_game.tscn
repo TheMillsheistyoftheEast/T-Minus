@@ -59,7 +59,7 @@ scale = Vector2(5.41685, 5.06446)
 texture = ExtResource("4_2ukhv")
 
 [node name="character" parent="." instance=ExtResource("1_gwuab")]
-position = Vector2(600.187, 529.937)
+position = Vector2(773, 396)
 
 [node name="CockpitWall" type="Sprite2D" parent="."]
 position = Vector2(472.187, 344.437)

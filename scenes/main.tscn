@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://wryv2cnqwxbb"]
+[gd_scene load_steps=9 format=3 uid="uid://wryv2cnqwxbb"]
 
 [ext_resource type="Script" uid="uid://dq7hkeo5hb3qf" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b0sw0joldlaqm" path="res://scenes/timer.tscn" id="2_0wfyh"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cm4j538svw1ii" path="res://scenes/find_bomb_game.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bh38oconsd2op" path="res://scenes/cut_the_wires_game.tscn" id="4_tefeu"]
 [ext_resource type="PackedScene" uid="uid://djine4iupcy46" path="res://scenes/bomb_game.tscn" id="5_o6xl0"]
+[ext_resource type="FontFile" uid="uid://rt3c2d1b875y" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf" id="7_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://bcjuwaoeu1nj4" path="res://Assets/Sounds/ITS GONNA EXPLODE.mp3" id="8_tipki"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_o5qli")
@@ -27,7 +29,23 @@ position = Vector2(2216, -24)
 position = Vector2(2286, 909)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(472, 1312)
+position = Vector2(496, 304)
+
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = -384.0
+offset_top = -288.0
+offset_right = -316.0
+offset_bottom = -265.0
+theme_override_fonts/font = ExtResource("7_o6xl0")
+text = "9:22 AM"
+
+[node name="Label2" type="Label" parent="Camera2D"]
+offset_left = 408.0
+offset_top = -288.0
+offset_right = 476.0
+offset_bottom = -265.0
+theme_override_fonts/font = ExtResource("7_o6xl0")
+text = "1/4/2027"
 
 [node name="time label" type="Label" parent="."]
 offset_left = 2670.0
@@ -42,6 +60,13 @@ offset_top = 1043.0
 offset_right = 2769.0
 offset_bottom = 1066.0
 text = "00:00"
+
+[node name="bgmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_tipki")
+autoplay = true
+max_distance = 2e+06
+attenuation = 3.75713e-05
+parameters/looping = true
 
 [connection signal="pressedGoToBomb" from="Find Bomb Game" to="." method="_on_find_bomb_game_pressed_go_to_bomb"]
 [connection signal="blueWireCut" from="CutTheWiresGame" to="." method="_on_cut_the_wires_game_blue_wire_cut"]

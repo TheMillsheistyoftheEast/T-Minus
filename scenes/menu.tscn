@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8hfjovk3jjmd"]
+[gd_scene load_steps=11 format=3 uid="uid://c8hfjovk3jjmd"]
 
 [ext_resource type="Script" uid="uid://bp312s0lm5gjr" path="res://scripts/menu.gd" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://bh4e6rgevgoil" path="res://Assets/menu screen background.png" id="2_mhnvy"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dm8rrdggqwn43" path="res://Assets/Rocket.png" id="5_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://bmi1d58vktpym" path="res://Assets/Quit.png" id="5_13sgg"]
 [ext_resource type="FontFile" uid="uid://dkyaakdxqp2m5" path="res://Assets/Fonts/Bitcount-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="6_v86rl"]
+[ext_resource type="AudioStream" uid="uid://bkebflv1yuf21" path="res://Assets/Sounds/Main Menu T Minus.mp3" id="8_13sgg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6lef"]
 
@@ -69,6 +70,11 @@ text = "T-Minus"
 position = Vector2(186, 356)
 scale = Vector2(5.99, 5.99)
 texture = ExtResource("5_4ytvr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_13sgg")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="button manager/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="button manager/quit" to="." method="_on_quit_pressed"]

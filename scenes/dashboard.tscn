@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6tpt7we6gcwe"]
+
+[ext_resource type="Script" uid="uid://beyybb70dwpq4" path="res://scripts/dashboard.gd" id="1_bjcq8"]
+[ext_resource type="Texture2D" uid="uid://5f6atadu3j4d" path="res://Assets/background tile.png" id="1_f3nql"]
+[ext_resource type="Texture2D" uid="uid://b6iw1oefv0mwd" path="res://Assets/dashboard screen.png" id="1_gj1ct"]
+[ext_resource type="FontFile" uid="uid://1cdlhaaihus0" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf" id="2_f3nql"]
+[ext_resource type="FontFile" uid="uid://1hr41hcqlfgd" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-BoldItalic.ttf" id="3_bjcq8"]
+[ext_resource type="FontFile" uid="uid://7ofhdrwqg6uc" path="res://Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Medium.ttf" id="4_e5s8x"]
+[ext_resource type="Texture2D" uid="uid://dm8rrdggqwn43" path="res://Assets/Rocket.png" id="5_ikpk0"]
+
+[node name="dashboard" type="Node2D"]
+script = ExtResource("1_bjcq8")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(517.006, 335.625)
+scale = Vector2(3.45, 3.45)
+texture = ExtResource("1_f3nql")
+
+[node name="screen" type="Sprite2D" parent="."]
+position = Vector2(508, 316)
+scale = Vector2(9.625, 9.625)
+texture = ExtResource("1_gj1ct")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 244.0
+offset_top = 164.0
+offset_right = 312.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("2_f3nql")
+text = "9:22 AM"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 700.0
+offset_top = 164.0
+offset_right = 758.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("3_bjcq8")
+text = "1/4/27"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 268.0
+offset_top = 196.0
+offset_right = 595.0
+offset_bottom = 418.0
+theme_override_fonts/font = ExtResource("4_e5s8x")
+text = "Thrusters: Ready
+Life Support: Ready
+Fuel: 100%
+Backup Fuel: 100%
+Backup Backup Fuel: 100%
+Emergency Power: 100% Available
+T-Minus: 10 Minutes
+Estimated Arrival: 1/4/27 11:55 PM
+"
+
+[node name="Rocket" type="Sprite2D" parent="."]
+position = Vector2(676, 300)
+scale = Vector2(-7.5, 7.5)
+texture = ExtResource("5_ikpk0")
