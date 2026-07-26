@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://yplmk1mkyd4s"]
+[gd_scene load_steps=5 format=3 uid="uid://yplmk1mkyd4s"]
 
 [ext_resource type="Texture2D" uid="uid://dtbayhng3qct4" path="res://Assets/black background.png" id="1_nld2j"]
+[ext_resource type="Texture2D" uid="uid://bh4e6rgevgoil" path="res://Assets/menu screen background.png" id="2_85q8e"]
+[ext_resource type="Texture2D" uid="uid://dm8rrdggqwn43" path="res://Assets/Rocket.png" id="3_fjxr3"]
 
 [sub_resource type="GDScript" id="GDScript_s7dif"]
 script/source = "extends Node2D
@@ -12,7 +14,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -42,5 +44,13 @@ offset_right = 550.0
 offset_bottom = 295.0
 text = "Press here to go back to main menu
 "
+
+[node name="MenuScreenBackground" type="Sprite2D" parent="."]
+position = Vector2(440, 416)
+texture = ExtResource("2_85q8e")
+
+[node name="Rocket" type="Sprite2D" parent="."]
+position = Vector2(488, 384)
+texture = ExtResource("3_fjxr3")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

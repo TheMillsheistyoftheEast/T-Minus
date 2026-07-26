@@ -100,7 +100,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kw7ec"]
 
 [node name="CutTheWiresGame" type="Node2D"]
-position = Vector2(-35, -100)
 script = ExtResource("1_7eq61")
 
 [node name="bomb inside" type="Sprite2D" parent="."]
@@ -109,10 +108,10 @@ scale = Vector2(6, 6)
 texture = ExtResource("2_jnq1j")
 
 [node name="red wire" type="Button" parent="."]
-offset_left = 275.0
-offset_top = 332.0
-offset_right = 467.0
-offset_bottom = 363.0
+offset_left = 427.0
+offset_top = 289.0
+offset_right = 491.0
+offset_bottom = 375.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jnq1j")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hl7m3")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_5i83r")
@@ -125,23 +124,23 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_cqprt")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2qb2o")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xdb87")
 
-[node name="pre cut" type="Sprite2D" parent="red wire"]
-position = Vector2(184, 1.90735e-06)
+[node name="pre cut red" type="Sprite2D" parent="."]
+position = Vector2(459, 332)
 scale = Vector2(2.64062, 2.17949)
 texture = ExtResource("3_hl7m3")
 
-[node name="post cut" type="Sprite2D" parent="red wire"]
+[node name="post cut red" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(424, -8.00001)
+position = Vector2(459, 329)
 rotation = 3.12812
 scale = Vector2(2.64063, 2.17723)
 texture = ExtResource("4_5i83r")
 
 [node name="yellow wire" type="Button" parent="."]
-offset_left = 491.0
-offset_top = 412.0
-offset_right = 829.0
-offset_bottom = 443.0
+offset_left = 384.0
+offset_top = 384.0
+offset_right = 456.0
+offset_bottom = 448.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cqrlg")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_16lt8")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_2x408")
@@ -154,23 +153,23 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_aflhj")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_bjpyi")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_jfro5")
 
-[node name="pre cut" type="Sprite2D" parent="yellow wire"]
-position = Vector2(-64, 2.01166e-06)
+[node name="pre cut yellow" type="Sprite2D" parent="."]
+position = Vector2(427, 412)
 rotation = -0.261799
 scale = Vector2(2.64062, 1.85687)
 texture = ExtResource("5_pqlkw")
 
-[node name="post cut" type="Sprite2D" parent="yellow wire"]
+[node name="post cut yellow" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(200, 24)
-rotation = 3.12812
+position = Vector2(444, 434)
+rotation = 2.09439
 scale = Vector2(2.64063, 2.20779)
 texture = ExtResource("6_iex86")
 
 [node name="blue wire" type="Button" parent="."]
-offset_left = 603.0
-offset_top = 372.0
-offset_right = 938.0
+offset_left = 480.0
+offset_top = 368.0
+offset_right = 549.0
 offset_bottom = 403.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7kdca")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7e8vr")
@@ -184,22 +183,23 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_5souk")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_7vp1y")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dupfu")
 
-[node name="pre cut" type="Sprite2D" parent="blue wire"]
-position = Vector2(-86, 24)
+[node name="pre cut blue" type="Sprite2D" parent="."]
+position = Vector2(517, 396)
 scale = Vector2(2.64062, 1.97226)
 texture = ExtResource("7_spo6b")
 
-[node name="post cut" type="Sprite2D" parent="blue wire"]
+[node name="post cut blue" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(168, 48)
+position = Vector2(517, 397)
 scale = Vector2(2.64063, 2.21967)
 texture = ExtResource("8_5nphq")
 
 [node name="green wire" type="Button" parent="."]
-offset_left = 611.0
-offset_top = 468.0
-offset_right = 941.0
-offset_bottom = 499.0
+offset_left = 427.0
+offset_top = 510.0
+offset_right = 573.0
+offset_bottom = 549.0
+rotation = -0.523598
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ftp65")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3w7qh")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_4w2t0")
@@ -212,16 +212,16 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_armek")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1w0r4")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_kw7ec")
 
-[node name="pre cut" type="Sprite2D" parent="green wire"]
-position = Vector2(-111.034, 22.2785)
+[node name="pre cut" type="Sprite2D" parent="."]
+position = Vector2(499.966, 490.279)
 rotation = 1.0472
 scale = Vector2(2.64062, 3.64898)
 texture = ExtResource("9_43uhu")
 
-[node name="post cut" type="Sprite2D" parent="green wire"]
+[node name="post cut" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-114.562, 23.1356)
-rotation = 4.18878
+position = Vector2(496.438, 491.136)
+rotation = -2.0944
 scale = Vector2(2.64063, 3.87945)
 texture = ExtResource("10_cqprt")
 

@@ -3,7 +3,7 @@ extends Node
 
 @onready var timer: Timer = $Timer
 @onready var timeLabel: Label = $"time label"
-@onready var timeLabel_2: Label = $"time label2"
+#@onready var timeLabel_2: Label = $"time label2"
 @onready var timeLabel_3: Label = $"time label3"
 
 #@onready var cut_the_wires_game: Node2D = $CutTheWiresGame
@@ -13,15 +13,15 @@ extends Node
 @onready var redWire: Button = $"CutTheWiresGame/red wire"
 @onready var yellowWire: Button = $"CutTheWiresGame/yellow wire"
 @onready var blueWire: Button = $"CutTheWiresGame/blue wire"
-@onready var greenWire: Button = $"CutTheWiresGame/green wire"
-@onready var red_pre_cut: Sprite2D = $"CutTheWiresGame/red wire/pre cut"
-@onready var red_post_cut: Sprite2D = $"CutTheWiresGame/red wire/post cut"
-@onready var yellow_pre_cut: Sprite2D = $"CutTheWiresGame/yellow wire/pre cut"
-@onready var yellow_post_cut: Sprite2D = $"CutTheWiresGame/yellow wire/post cut"
-@onready var blue_pre_cut: Sprite2D = $"CutTheWiresGame/blue wire/pre cut"
-@onready var blue_post_cut: Sprite2D = $"CutTheWiresGame/blue wire/post cut"
-@onready var green_pre_cut: Sprite2D = $"CutTheWiresGame/green wire/pre cut"
-@onready var green_post_cut: Sprite2D = $"CutTheWiresGame/green wire/pre cut"
+#@onready var greenWire: Button = $"CutTheWiresGame/green wire"
+#@onready var red_pre_cut: Sprite2D = $"CutTheWiresGame/red wire/pre cut"
+#@onready var red_post_cut: Sprite2D = $"CutTheWiresGame/red wire/post cut"
+#@onready var yellow_pre_cut: Sprite2D = $"CutTheWiresGame/yellow wire/pre cut"
+#@onready var yellow_post_cut: Sprite2D = $"CutTheWiresGame/yellow wire/post cut"
+#@onready var blue_pre_cut: Sprite2D = $"CutTheWiresGame/blue wire/pre cut"
+#@onready var blue_post_cut: Sprite2D = $"CutTheWiresGame/blue wire/post cut"
+#@onready var green_pre_cut: Sprite2D = $"CutTheWiresGame/green wire/pre cut"
+#@onready var green_post_cut: Sprite2D = $"CutTheWiresGame/green wire/pre cut"
 #@onready var timer: Timer = $"Timer"
 #@onready var timeLabel: Label = $"time label"
 
@@ -73,7 +73,7 @@ func gameOver() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	timeLabel.text = str(_format_seconds(timer.time_left))
-	timeLabel_2.text = str(_format_seconds(timer.time_left))
+	#timeLabel_2.text = str(_format_seconds(timer.time_left))
 	timeLabel_3.text = str(_format_seconds(timer.time_left))
 
 

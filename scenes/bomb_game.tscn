@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://djine4iupcy46"]
+[gd_scene load_steps=6 format=3 uid="uid://djine4iupcy46"]
 
+[ext_resource type="Texture2D" uid="uid://7yr4jq2sns1f" path="res://Assets/CockpitFloor.png" id="1_qk3n1"]
 [ext_resource type="Script" uid="uid://6d5majy8hicm" path="res://scripts/bombDone.gd" id="1_wbx4c"]
 [ext_resource type="Texture2D" uid="uid://bave1a4lp3uu" path="res://Assets/BombSpritePad.png" id="2_huhyi"]
 [ext_resource type="PackedScene" uid="uid://bgewkfpth40a2" path="res://scenes/keypad.tscn" id="3_huhyi"]
@@ -15,6 +16,11 @@ func _on_keypad_got_right_password_keypad() -> void:
 
 [node name="BombGame" type="Node2D"]
 script = SubResource("GDScript_huhyi")
+
+[node name="CockpitFloor" type="Sprite2D" parent="."]
+position = Vector2(736, 1920)
+scale = Vector2(53.5364, 53.5364)
+texture = ExtResource("1_qk3n1")
 
 [node name="bomb" type="StaticBody2D" parent="."]
 position = Vector2(267, 67)

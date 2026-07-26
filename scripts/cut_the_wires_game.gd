@@ -5,14 +5,16 @@ extends Node2D
 @onready var yellowWire: Button = $"yellow wire"
 @onready var blueWire: Button = $"blue wire"
 @onready var greenWire: Button = $"green wire"
-@onready var red_pre_cut: Sprite2D = $"red wire/pre cut"
-@onready var red_post_cut: Sprite2D = $"red wire/post cut"
-@onready var yellow_pre_cut: Sprite2D = $"yellow wire/pre cut"
-@onready var yellow_post_cut: Sprite2D = $"yellow wire/post cut"
-@onready var blue_pre_cut: Sprite2D = $"blue wire/pre cut"
-@onready var blue_post_cut: Sprite2D = $"blue wire/post cut"
-@onready var green_pre_cut: Sprite2D = $"green wire/pre cut"
-@onready var green_post_cut: Sprite2D = $"green wire/post cut"
+@onready var pre_cut_red: Sprite2D = $"pre cut red"
+@onready var post_cut_red: Sprite2D = $"post cut red"
+@onready var pre_cut_yellow: Sprite2D = $"pre cut yellow"
+@onready var post_cut_yellow: Sprite2D = $"post cut yellow"
+@onready var pre_cut_blue: Sprite2D = $"pre cut blue"
+@onready var post_cut_blue: Sprite2D = $"post cut blue"
+@onready var pre_cut: Sprite2D = $"pre cut"
+@onready var post_cut: Sprite2D = $"post cut"
+
+
 #@onready var timer: Timer = $"Timer"
 @onready var timeLabel: Label = $"time label"
 @onready var messages: Label = $messages
@@ -41,26 +43,26 @@ func _process(_delta: float) -> void:
 
 
 func _on_red_wire_pressed() -> void:
-	red_pre_cut.hide()
-	red_post_cut.show()
+	pre_cut_red.hide()
+	post_cut_red.show()
 	redWireCut.emit()
 	get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
 
 
 func _on_yellow_wire_pressed() -> void:
 	print('crashout')
-	yellow_pre_cut.hide()
-	yellow_post_cut.show()
+	pre_cut_yellow.hide()
+	post_cut_yellow.show()
 	yellowWireCut.emit()
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	
 func _on_blue_wire_pressed() -> void:
 	print('less time.. gulp!')
-	blue_pre_cut.hide()
-	blue_post_cut.show()
+	pre_cut_blue.hide()
+	post_cut_blue.show()
 	blueWireCut.emit()
 	messages.text = "Uh oh, wrong wire! There's less time left now! I better hurry."
 	
 func _on_green_wire_pressed() -> void:
-	green_pre_cut.hide()
-	green_post_cut.show()
+	pre_cut.hide()
+	post_cut.show()

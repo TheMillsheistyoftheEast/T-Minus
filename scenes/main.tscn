@@ -36,13 +36,6 @@ offset_right = 2689.0
 offset_bottom = 207.0
 text = "00:00"
 
-[node name="time label2" type="Label" parent="."]
-offset_left = 112.0
-offset_top = 16.0
-offset_right = 153.0
-offset_bottom = 39.0
-text = "00:00"
-
 [node name="time label3" type="Label" parent="."]
 offset_left = 2728.0
 offset_top = 1043.0
