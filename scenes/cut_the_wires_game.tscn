@@ -1,6 +1,7 @@
-[gd_scene load_steps=55 format=3 uid="uid://bh38oconsd2op"]
+[gd_scene load_steps=59 format=3 uid="uid://bh38oconsd2op"]
 
 [ext_resource type="Script" uid="uid://wsr0sfxsas8k" path="res://scripts/cut_the_wires_game.gd" id="1_7eq61"]
+[ext_resource type="Texture2D" uid="uid://clpw3qkoqqclw" path="res://Assets/flooring backgrount tminus.png" id="2_hl7m3"]
 [ext_resource type="Texture2D" uid="uid://b3672gr57nvpf" path="res://Assets/BombRealInards.png" id="2_jnq1j"]
 [ext_resource type="Texture2D" uid="uid://b6ylif1j8ktjc" path="res://Assets/RedWire1.png" id="3_hl7m3"]
 [ext_resource type="Texture2D" uid="uid://c7a3jq7vulm05" path="res://Assets/RedWire2.png" id="4_5i83r"]
@@ -10,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://ctcmjkylkg8jr" path="res://Assets/BlueWire2.png" id="8_5nphq"]
 [ext_resource type="Texture2D" uid="uid://cc6axj83mkobu" path="res://Assets/GreenWire1.png" id="9_43uhu"]
 [ext_resource type="Texture2D" uid="uid://fc006ayrsjqp" path="res://Assets/GreenWire2.png" id="10_cqprt"]
+[ext_resource type="AudioStream" uid="uid://up03b7snk57t" path="res://Assets/Sounds/10_ui_sfx_free_samples/013_Confirm_03.wav" id="12_iex86"]
+[ext_resource type="AudioStream" uid="uid://j7mc5howqnu3" path="res://Assets/Sounds/10_ui_sfx_free_samples/033_Denied_03.wav" id="13_spo6b"]
+[ext_resource type="AudioStream" uid="uid://fpltdh74tdn6" path="res://Assets/Sounds/10_ui_sfx_free_samples/001_Hover_01.wav" id="14_5nphq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnq1j"]
 
@@ -101,6 +105,11 @@
 
 [node name="CutTheWiresGame" type="Node2D"]
 script = ExtResource("1_7eq61")
+
+[node name="FlooringBackgrountTminus" type="Sprite2D" parent="."]
+position = Vector2(492, 452)
+scale = Vector2(36.25, 36.25)
+texture = ExtResource("2_hl7m3")
 
 [node name="bomb inside" type="Sprite2D" parent="."]
 position = Vector2(475, 347)
@@ -234,8 +243,20 @@ offset_left = 155.0
 offset_top = 70.0
 offset_right = 795.0
 offset_bottom = 93.0
-text = "I have to cut the right wire to defuse the bomb!"
+text = "Well, good thing I found the code! I have to cut the right wire to defuse the bomb!"
 horizontal_alignment = 1
+
+[node name="correct sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(41, 102)
+stream = ExtResource("12_iex86")
+
+[node name="wrong sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(41, 102)
+stream = ExtResource("13_spo6b")
+
+[node name="key pressed" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(41, 102)
+stream = ExtResource("14_5nphq")
 
 [connection signal="pressed" from="red wire" to="." method="_on_red_wire_pressed"]
 [connection signal="pressed" from="yellow wire" to="." method="_on_yellow_wire_pressed"]

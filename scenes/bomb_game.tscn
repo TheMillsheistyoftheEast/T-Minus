@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://djine4iupcy46"]
 
-[ext_resource type="Texture2D" uid="uid://7yr4jq2sns1f" path="res://Assets/CockpitFloor.png" id="1_qk3n1"]
+[ext_resource type="Texture2D" uid="uid://clpw3qkoqqclw" path="res://Assets/flooring backgrount tminus.png" id="1_qk3n1"]
 [ext_resource type="Script" uid="uid://6d5majy8hicm" path="res://scripts/bombDone.gd" id="1_wbx4c"]
 [ext_resource type="Texture2D" uid="uid://bave1a4lp3uu" path="res://Assets/BombSpritePad.png" id="2_huhyi"]
 [ext_resource type="PackedScene" uid="uid://bgewkfpth40a2" path="res://scenes/keypad.tscn" id="3_huhyi"]
@@ -17,9 +17,9 @@ func _on_keypad_got_right_password_keypad() -> void:
 [node name="BombGame" type="Node2D"]
 script = SubResource("GDScript_huhyi")
 
-[node name="CockpitFloor" type="Sprite2D" parent="."]
-position = Vector2(736, 1920)
-scale = Vector2(53.5364, 53.5364)
+[node name="FlooringBackgrountTminus" type="Sprite2D" parent="."]
+position = Vector2(492, 452)
+scale = Vector2(36.25, 36.25)
 texture = ExtResource("1_qk3n1")
 
 [node name="bomb" type="StaticBody2D" parent="."]
@@ -33,5 +33,14 @@ texture = ExtResource("2_huhyi")
 
 [node name="keypad" parent="." instance=ExtResource("3_huhyi")]
 position = Vector2(310, 59)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 893.0
+offset_bottom = 65.0
+text = "What?! Is this a bomb?! On my spaceship?! 
+I better defuse this, quick, or there won't be any January 4th launch!"
+horizontal_alignment = 1
 
 [connection signal="gotRightPasswordKeypad" from="keypad" to="." method="_on_keypad_got_right_password_keypad"]

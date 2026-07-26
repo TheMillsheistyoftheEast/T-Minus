@@ -18,6 +18,9 @@ extends Node2D
 #@onready var timer: Timer = $"Timer"
 @onready var timeLabel: Label = $"time label"
 @onready var messages: Label = $messages
+@onready var correctSound: AudioStreamPlayer2D = $"correct sound"
+@onready var wrongSound: AudioStreamPlayer2D = $"wrong sound"
+@onready var keyPressed: AudioStreamPlayer2D = $"key pressed"
 
 signal blueWireCut
 signal redWireCut
@@ -45,6 +48,7 @@ func _process(_delta: float) -> void:
 func _on_red_wire_pressed() -> void:
 	pre_cut_red.hide()
 	post_cut_red.show()
+	correctSound.play()
 	redWireCut.emit()
 	get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
 
@@ -53,6 +57,7 @@ func _on_yellow_wire_pressed() -> void:
 	print('crashout')
 	pre_cut_yellow.hide()
 	post_cut_yellow.show()
+	wrongSound.play()
 	yellowWireCut.emit()
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	
@@ -60,9 +65,11 @@ func _on_blue_wire_pressed() -> void:
 	print('less time.. gulp!')
 	pre_cut_blue.hide()
 	post_cut_blue.show()
+	wrongSound.play()
 	blueWireCut.emit()
 	messages.text = "Uh oh, wrong wire! There's less time left now! I better hurry."
 	
 func _on_green_wire_pressed() -> void:
 	pre_cut.hide()
 	post_cut.show()
+	wrongSound.play()
