@@ -1,11 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://yplmk1mkyd4s"]
 
-[ext_resource type="Texture2D" uid="uid://dtbayhng3qct4" path="res://Assets/black background.png" id="1_nld2j"]
 [ext_resource type="Texture2D" uid="uid://bh4e6rgevgoil" path="res://Assets/menu screen background.png" id="2_85q8e"]
 [ext_resource type="Texture2D" uid="uid://dm8rrdggqwn43" path="res://Assets/Rocket.png" id="3_fjxr3"]
+[ext_resource type="Script" uid="uid://clf8kfcsmng5o" path="res://scripts/rocket.gd" id="4_fjxr3"]
 
 [sub_resource type="GDScript" id="GDScript_s7dif"]
 script/source = "extends Node2D
+
+@onready var rocket: Sprite2D = $Rocket
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,17 +19,18 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://scenes/menu.tscn\")
+	
 "
 
 [node name="End Scene" type="Node2D"]
 script = SubResource("GDScript_s7dif")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(674, 462)
-texture = ExtResource("1_nld2j")
+[node name="MenuScreenBackground" type="Sprite2D" parent="."]
+position = Vector2(539.1, 300.5)
+scale = Vector2(5.99, 5.99)
+texture = ExtResource("2_85q8e")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 24.0
@@ -45,12 +48,10 @@ offset_bottom = 295.0
 text = "Press here to go back to main menu
 "
 
-[node name="MenuScreenBackground" type="Sprite2D" parent="."]
-position = Vector2(440, 416)
-texture = ExtResource("2_85q8e")
-
 [node name="Rocket" type="Sprite2D" parent="."]
-position = Vector2(488, 384)
+position = Vector2(976, 174)
+scale = Vector2(3.3125, 3.3125)
 texture = ExtResource("3_fjxr3")
+script = ExtResource("4_fjxr3")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
