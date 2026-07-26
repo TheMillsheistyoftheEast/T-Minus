@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://yplmk1mkyd4s"]
+[gd_scene load_steps=19 format=3 uid="uid://yplmk1mkyd4s"]
 
 [ext_resource type="Texture2D" uid="uid://bh4e6rgevgoil" path="res://Assets/menu screen background.png" id="2_85q8e"]
 [ext_resource type="Texture2D" uid="uid://dm8rrdggqwn43" path="res://Assets/Rocket.png" id="3_fjxr3"]
 [ext_resource type="Script" uid="uid://clf8kfcsmng5o" path="res://scripts/rocket.gd" id="4_fjxr3"]
+[ext_resource type="Texture2D" uid="uid://dmj1vtd04vyf3" path="res://Assets/Explosion.png" id="4_ojf8p"]
 
 [sub_resource type="GDScript" id="GDScript_s7dif"]
 script/source = "extends Node2D
@@ -23,6 +24,98 @@ func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://scenes/menu.tscn\")
 	
 "
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4835h"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxua3"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyprt"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_notft"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmkd0"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24b1x"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4wik"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfflf"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ieop"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4w31"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgqhb"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(960, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl4u6"]
+atlas = ExtResource("4_ojf8p")
+region = Rect2(1056, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmxd3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4835h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxua3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyprt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_notft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmkd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24b1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4wik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfflf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ieop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4w31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgqhb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cl4u6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="End Scene" type="Node2D"]
 script = SubResource("GDScript_s7dif")
@@ -49,9 +142,15 @@ text = "Press here to go back to main menu
 "
 
 [node name="Rocket" type="Sprite2D" parent="."]
-position = Vector2(976, 174)
+position = Vector2(36, 568)
 scale = Vector2(3.3125, 3.3125)
 texture = ExtResource("3_fjxr3")
 script = ExtResource("4_fjxr3")
+
+[node name="explode" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(955, 206)
+scale = Vector2(3.3125, 3.3125)
+sprite_frames = SubResource("SpriteFrames_rmxd3")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

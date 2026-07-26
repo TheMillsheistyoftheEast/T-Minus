@@ -30,10 +30,10 @@ position = Vector2(2286, 909)
 position = Vector2(472, 1312)
 
 [node name="time label" type="Label" parent="."]
-offset_left = 2648.0
-offset_top = 184.0
-offset_right = 2689.0
-offset_bottom = 207.0
+offset_left = 2670.0
+offset_top = 185.0
+offset_right = 2711.0
+offset_bottom = 208.0
 text = "00:00"
 
 [node name="time label3" type="Label" parent="."]

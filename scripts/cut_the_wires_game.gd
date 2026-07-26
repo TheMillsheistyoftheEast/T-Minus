@@ -73,3 +73,4 @@ func _on_green_wire_pressed() -> void:
 	pre_cut.hide()
 	post_cut.show()
 	wrongSound.play()
+	messages.text = "Welp, that wasn't it! I still got time."

@@ -14,9 +14,10 @@ scale = Vector2(5.99, 5.99)
 texture = ExtResource("2_i2l1n")
 
 [node name="Story" type="Label" parent="."]
-offset_top = 32.0
-offset_right = 1000.0
-offset_bottom = 630.0
+offset_left = -5.0
+offset_top = 13.0
+offset_right = 995.0
+offset_bottom = 611.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_4bx60")
 theme_override_font_sizes/font_size = 30
